@@ -24,6 +24,118 @@ const verdictStyle = {
   limit: "bg-clay/10 text-clay border-clay/30",
 } as const;
 
+function DishCard({
+  dish,
+  focus,
+  chinese,
+}: {
+  dish: Food;
+  focus: (typeof stoneFocuses)[number]["id"];
+  chinese: boolean;
+}) {
+  const [open, setOpen] = useState(false);
+  const guidance = guidanceFor(dish, focus);
+  const large = dish.image && !dish.image.startsWith("/foods/thumbs/") ? dish.image : undefined;
+  const thumb = large ? `/foods/thumbs/${large.slice(large.lastIndexOf("/") + 1)}` : dish.image;
+  const name = chinese ? chineseFoodName(dish) : dish.name;
+  const photoLabel = chinese
+    ? open
+      ? `收起${name}的大图`
+      : `查看${name}的大图`
+    : open
+      ? `Hide the larger photo of ${name}`
+      : `Show the larger photo of ${name}`;
+
+  return (
+    <li className="rounded-md bg-paper/70 p-3">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex min-w-0 items-center gap-3">
+          {thumb ? (
+            large ? (
+              <button
+                type="button"
+                aria-expanded={open}
+                aria-label={photoLabel}
+                onClick={() => setOpen((value) => !value)}
+                className="shrink-0 cursor-pointer rounded-sm"
+              >
+                <Image
+                  src={thumb}
+                  alt=""
+                  width={64}
+                  height={64}
+                  unoptimized
+                  loading="lazy"
+                  decoding="async"
+                  className="h-16 w-16 rounded-sm object-cover"
+                />
+              </button>
+            ) : (
+              <Image
+                src={thumb}
+                alt=""
+                width={64}
+                height={64}
+                unoptimized
+                loading="lazy"
+                decoding="async"
+                className="h-16 w-16 shrink-0 rounded-sm object-cover"
+              />
+            )
+          ) : null}
+          <h3 className="font-semibold text-ink">{name}</h3>
+        </div>
+        <span className={`rounded-full border px-2.5 py-1 text-xs font-semibold ${verdictStyle[guidance.verdict]}`}>
+          {chinese ? chineseVerdict(guidance.verdict) : verdicts[guidance.verdict].label}
+        </span>
+      </div>
+      {open && large ? (
+        <div className="mt-3">
+          <Image
+            src={large}
+            alt={dish.originalName ? `${dish.name}, ${dish.originalName}` : dish.name}
+            width={640}
+            height={480}
+            sizes="(max-width: 640px) 100vw, 320px"
+            className="h-44 w-full rounded-sm object-cover"
+          />
+          {dish.imageCredit ? (
+            <p className="mt-1 text-[10px] leading-4 text-ink/55">
+              Photo:{" "}
+              <a
+                href={dish.imageCredit.sourceUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-2"
+              >
+                {dish.imageCredit.creator}
+              </a>
+              {" · "}
+              <a
+                href={dish.imageCredit.licenseUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-2"
+              >
+                {dish.imageCredit.license}
+              </a>
+              {" · resized"}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
+      {chinese && dish.name !== name ? <p className="text-xs text-ink/55">{dish.name}</p> : dish.originalName ? <p className="mt-1 text-xs text-ink/55">{dish.originalName}</p> : null}
+      <p className="mt-1 text-sm leading-6 text-ink/75">{chinese ? chineseFoodTip(dish) : dish.tip}</p>
+      <details className="mt-2 rounded-sm bg-card/70 px-2.5 py-2">
+        <summary className="cursor-pointer text-xs font-semibold text-pine">
+          {chinese ? "为什么这样建议？" : "Why this suggestion?"}
+        </summary>
+        <p className="mt-1 text-xs leading-5 text-ink/70">{chinese ? chineseGuidance(dish, focus, guidance.verdict) : guidance.reason}</p>
+      </details>
+    </li>
+  );
+}
+
 export function CuisineGuide() {
   const [focus, setFocus] = useState<(typeof stoneFocuses)[number]["id"]>("unsure");
   const { language } = useLanguage();
@@ -44,62 +156,6 @@ export function CuisineGuide() {
         : "Home cooking and dishes representing regional Chinese cuisines.",
     },
   ] as const;
-
-  function renderDishCard(dish: Food) {
-    const guidance = guidanceFor(dish, focus);
-    return (
-      <li key={dish.id} className="rounded-md bg-paper/70 p-3">
-        {dish.image ? (
-          <Image
-            src={dish.image}
-            alt={dish.originalName ? `${dish.name}, ${dish.originalName}` : dish.name}
-            width={640}
-            height={480}
-            sizes="(max-width: 640px) 100vw, 50vw"
-            loading="lazy"
-            className="mb-3 h-36 w-full rounded-sm object-cover"
-          />
-        ) : null}
-        {dish.imageCredit ? (
-          <p className="mb-2 text-[10px] leading-4 text-ink/55">
-            Photo:{" "}
-            <a
-              href={dish.imageCredit.sourceUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-2"
-            >
-              {dish.imageCredit.creator}
-            </a>
-            {" · "}
-            <a
-              href={dish.imageCredit.licenseUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-2"
-            >
-              {dish.imageCredit.license}
-            </a>
-            {" · resized"}
-          </p>
-        ) : null}
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <h3 className="font-semibold text-ink">{chinese ? chineseFoodName(dish) : dish.name}</h3>
-          <span className={`rounded-full border px-2.5 py-1 text-xs font-semibold ${verdictStyle[guidance.verdict]}`}>
-            {chinese ? chineseVerdict(guidance.verdict) : verdicts[guidance.verdict].label}
-          </span>
-        </div>
-        {chinese && dish.name !== chineseFoodName(dish) ? <p className="text-xs text-ink/55">{dish.name}</p> : dish.originalName ? <p className="text-xs text-ink/55">{dish.originalName}</p> : null}
-        <p className="mt-1 text-sm leading-6 text-ink/75">{chinese ? chineseFoodTip(dish) : dish.tip}</p>
-        <details className="mt-2 rounded-sm bg-card/70 px-2.5 py-2">
-          <summary className="cursor-pointer text-xs font-semibold text-pine">
-            {chinese ? "为什么这样建议？" : "Why this suggestion?"}
-          </summary>
-          <p className="mt-1 text-xs leading-5 text-ink/70">{chinese ? chineseGuidance(dish, focus, guidance.verdict) : guidance.reason}</p>
-        </details>
-      </li>
-    );
-  }
 
   return (
     <>
@@ -164,7 +220,9 @@ export function CuisineGuide() {
                         <h3 className="font-serif text-xl text-ink">{group.title}</h3>
                         <p className="mt-1 text-sm text-ink/65">{group.description}</p>
                         <ul className="mt-3 grid gap-3 sm:grid-cols-2">
-                          {groupItems.map(renderDishCard)}
+                          {groupItems.map((dish) => (
+                            <DishCard key={dish.id} dish={dish} focus={focus} chinese={chinese} />
+                          ))}
                         </ul>
                       </section>
                     );
@@ -172,7 +230,9 @@ export function CuisineGuide() {
                 </div>
               ) : (
                 <ul className="grid gap-3 border-t border-line p-4 sm:grid-cols-2">
-                  {items.map(renderDishCard)}
+                  {items.map((dish) => (
+                    <DishCard key={dish.id} dish={dish} focus={focus} chinese={chinese} />
+                  ))}
                 </ul>
               )}
             </details>

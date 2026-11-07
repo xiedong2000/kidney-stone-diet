@@ -211,17 +211,19 @@ export function FoodChecker({
             const guidance = guidanceFor(item, focus);
             const verdict = verdicts[guidance.verdict];
             const names = foodDisplayNames(item, isChinese);
+            const thumb = item.image?.startsWith("/foods/thumbs/") ? item.image : undefined;
+            const photo = item.image && !thumb ? item.image : undefined;
             return (
               <li
                 key={item.id}
                 className={`overflow-hidden rounded-md border border-line bg-card ${
-                  item.image ? "sm:grid sm:grid-cols-[11rem_1fr]" : ""
+                  photo ? "sm:grid sm:grid-cols-[11rem_1fr]" : ""
                 }`}
               >
-                {item.image ? (
+                {photo ? (
                   <div>
                     <Image
-                      src={item.image}
+                      src={photo}
                       alt={item.id === "gai-lan"
                         ? isChinese
                           ? "炒芥兰配杏鲍菇（示例做法）"
@@ -271,11 +273,25 @@ export function FoodChecker({
                 ) : null}
                 <div className="p-4 sm:p-5">
                 <div className="flex flex-wrap items-start justify-between gap-3">
-                  <div>
+                  <div className="flex min-w-0 items-center gap-3">
+                    {thumb ? (
+                      <Image
+                        src={thumb}
+                        alt=""
+                        width={64}
+                        height={64}
+                        unoptimized
+                        loading="lazy"
+                        decoding="async"
+                        className="h-16 w-16 shrink-0 rounded-sm object-cover"
+                      />
+                    ) : null}
+                    <div>
                     <h2 className="font-serif text-2xl text-ink">{names.primary}</h2>
                     {names.secondary ? (
                       <p className="text-sm text-ink/55">{names.secondary}</p>
                     ) : null}
+                    </div>
                   </div>
                   <p
                     className={`rounded-full border px-3 py-1 text-sm font-semibold ${verdictStyle[guidance.verdict]}`}
