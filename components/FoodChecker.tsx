@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { cuisineCovers } from "@/lib/dishes";
+import { foodSearchScore } from "@/lib/food-search";
 import { featuredFoodIds, foods } from "@/lib/foods";
 import { guidanceFor } from "@/lib/guidance";
 import {
@@ -32,25 +32,24 @@ export function FoodChecker() {
 
   const results = useMemo(() => {
     const pool = foods.filter((item) => {
-      const matchesQuery =
-        query.length === 0 ||
-        [item.name, item.originalName ?? "", item.cuisine, item.group, ...item.aliases]
-          .join(" ")
-          .toLowerCase()
-          .includes(query);
-
-      if (!matchesQuery) return false;
-      if (query) return true;
+      if (query && foodSearchScore(item, query) === null) return false;
       if (cuisine !== "all" && item.cuisine !== cuisine) return false;
+      if (group !== "asked" && group !== "all" && item.group !== group) return false;
+      if (query) return true;
       if (group === "asked") {
         if (cuisine !== "all") return true;
         return featuredFoodIds.includes(item.id as (typeof featuredFoodIds)[number]);
       }
-      if (group === "all") return true;
-      return item.group === group;
+      return true;
     });
 
     return pool.sort((a, b) => {
+      if (query) {
+        return (
+          (foodSearchScore(b, query) ?? 0) - (foodSearchScore(a, query) ?? 0) ||
+          a.name.localeCompare(b.name)
+        );
+      }
       if (!query && group === "asked" && cuisine === "all") {
         return (
           featuredFoodIds.indexOf(a.id as (typeof featuredFoodIds)[number]) -
@@ -63,99 +62,61 @@ export function FoodChecker() {
 
   return (
     <div className="mt-8">
-      <fieldset>
-        <legend className="text-sm font-semibold text-ink">
-          Which stone are you planning around?
-        </legend>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {stoneFocuses.map((item) => (
-            <label
-              key={item.id}
-              className={`cursor-pointer rounded-md border px-3 py-2 text-sm font-semibold has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-pine ${
-                focus === item.id
-                  ? "border-pine bg-pine text-paper"
-                  : "border-line bg-card text-ink hover:border-pine/40"
-              }`}
-            >
-              <input
-                type="radio"
-                name="stone-focus"
-                value={item.id}
-                checked={focus === item.id}
-                onChange={() => setFocus(item.id)}
-                className="sr-only"
-              />
-              {item.label}
-            </label>
-          ))}
-        </div>
-      </fieldset>
-      <p className="mt-3 max-w-3xl text-sm leading-6 text-ink/75">{selected.summary}</p>
-
-      <div className="mt-6 grid gap-3 sm:grid-cols-[1fr_auto] sm:items-end">
+      <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
-          <span className="text-sm font-semibold text-ink">Search a food</span>
+          <span className="text-sm font-semibold text-ink">What are you serving or ordering?</span>
           <input
             type="search"
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-            placeholder="Try 番茄炒蛋, tacos, ramen, spinach"
+            placeholder="Search a food or dish"
             autoComplete="off"
             className="mt-2 w-full rounded-md border border-line bg-card px-3 py-3 text-base text-ink outline-none placeholder:text-ink/40"
           />
         </label>
-        <p className="text-sm text-ink/60" aria-live="polite">
-          {results.length} {results.length === 1 ? "food" : "foods"}
-        </p>
-      </div>
-
-      <div className="mt-5" role="group" aria-label="Cuisine">
-        <p className="text-sm font-semibold text-ink">Which table is this from?</p>
-        <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
-          {cuisines.map((item) => {
-            const cover = item.id === "all" ? "/foods/table-spread.jpg" : cuisineCovers[item.id];
-            return (
-              <button
-                key={item.id}
-                type="button"
-                aria-pressed={cuisine === item.id}
-                onClick={() => setCuisine(item.id)}
-                className={`flex w-28 shrink-0 flex-col overflow-hidden rounded-md border text-left ${
-                  cuisine === item.id
-                    ? "border-pine ring-2 ring-pine"
-                    : "border-line bg-card"
-                }`}
-              >
-                <Image
-                  src={cover}
-                  alt=""
-                  width={320}
-                  height={240}
-                  className="h-16 w-full object-cover"
-                />
-                <span className="px-2 py-1.5 text-xs font-semibold text-ink">{item.label}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      <div className="mt-4 flex flex-wrap gap-2" role="group" aria-label="Food groups">
-        {foodGroups.map((item) => (
-          <button
-            key={item.id}
-            type="button"
-            aria-pressed={group === item.id}
-            onClick={() => setGroup(item.id)}
-            className={`rounded-full border px-3 py-1.5 text-sm font-semibold ${
-              group === item.id
-                ? "border-mineral bg-mineral text-paper"
-                : "border-line bg-card text-ink hover:border-mineral/40"
-            }`}
+        <label className="block">
+          <span className="text-sm font-semibold text-ink">Stone type</span>
+          <select
+            value={focus}
+            onChange={(event) => setFocus(event.target.value as StoneFocusId)}
+            className="mt-2 w-full rounded-md border border-line bg-card px-3 py-3 text-base text-ink"
           >
-            {item.label}
-          </button>
-        ))}
+            {stoneFocuses.map((item) => (
+              <option key={item.id} value={item.id}>{item.label}</option>
+            ))}
+          </select>
+          <span className="mt-1 block text-xs leading-5 text-ink/60">{selected.summary}</span>
+        </label>
+      </div>
+
+      <div className="mt-4 grid gap-3 sm:grid-cols-[1fr_1fr_auto] sm:items-end">
+        <label className="block">
+          <span className="text-sm font-semibold text-ink">Restaurant / cuisine</span>
+          <select
+            value={cuisine}
+            onChange={(event) => setCuisine(event.target.value as Cuisine)}
+            className="mt-2 w-full rounded-md border border-line bg-card px-3 py-2.5 text-base text-ink"
+          >
+            {cuisines.map((item) => (
+              <option key={item.id} value={item.id}>{item.label}</option>
+            ))}
+          </select>
+        </label>
+        <label className="block">
+          <span className="text-sm font-semibold text-ink">Browse</span>
+          <select
+            value={group}
+            onChange={(event) => setGroup(event.target.value as FoodGroup)}
+            className="mt-2 w-full rounded-md border border-line bg-card px-3 py-2.5 text-base text-ink"
+          >
+            {foodGroups.map((item) => (
+              <option key={item.id} value={item.id}>{item.label}</option>
+            ))}
+          </select>
+        </label>
+        <p className="text-sm text-ink/60" aria-live="polite">
+          {results.length} {results.length === 1 ? "match" : "matches"}
+        </p>
       </div>
 
       {results.length === 0 ? (
@@ -198,18 +159,35 @@ export function FoodChecker() {
                     {verdict.label}
                   </p>
                 </div>
-                <p className="mt-2 text-sm text-ink/55">
-                  Oxalate {item.oxalate} · Sodium {item.sodium} · Purine {item.purine}
-                  {item.addedSugar !== "low" ? ` · Added sugar ${item.addedSugar}` : ""}
+                <p className="mt-3 text-sm leading-6 text-ink/80">
+                  <span className="font-semibold text-ink">Serving / ordering note: </span>
+                  {item.tip}
                 </p>
                 {item.oxalateMg != null && item.oxalateServing ? (
-                  <p className="mt-1 text-sm text-pine">
-                    {item.oxalateMg} mg per {item.oxalateServing}
-                    {item.oxalateSheet ? ` · handout label: ${item.oxalateSheet}` : ""}
+                  <p className="mt-2 text-sm text-pine">
+                    Oxalate reference portion: {item.oxalateMg} mg per{" "}
+                    {item.id === "tofu"
+                      ? "3.5 oz (about 100 g by weight)"
+                      : item.oxalateServing}
+                    {item.id === "tofu" ? ". This is a reference amount, not a daily limit." : ""}
                   </p>
                 ) : null}
-                <p className="mt-3 leading-7 text-ink/85">{guidance.reason}</p>
-                <p className="mt-2 text-sm leading-6 text-ink/70">{item.tip}</p>
+                <details className="mt-3 rounded-md bg-paper/70 px-3 py-2">
+                  <summary className="cursor-pointer text-sm font-semibold text-pine">
+                    Why this suggestion?
+                  </summary>
+                  <p className="mt-2 text-sm leading-6 text-ink/75">{guidance.reason}</p>
+                  <p className="mt-2 text-xs leading-5 text-ink/60">
+                    Oxalate {item.oxalate} · Sodium {item.sodium} · Purine {item.purine}
+                    {item.addedSugar !== "low" ? ` · Added sugar ${item.addedSugar}` : ""}
+                  </p>
+                  {item.oxalateMg != null && item.oxalateServing ? (
+                    <p className="mt-1 text-xs leading-5 text-ink/60">
+                      The oxalate value comes from a food handout
+                      {item.oxalateSheet ? ` labeled ${item.oxalateSheet}` : ""}. Amounts vary by food and preparation.
+                    </p>
+                  ) : null}
+                </details>
                 </div>
               </li>
             );

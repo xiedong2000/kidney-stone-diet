@@ -3,18 +3,22 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const links = [
-  { href: "/check", label: "Check a food" },
-  { href: "/cuisines", label: "Cuisines" },
-  { href: "/oxalate", label: "Oxalate" },
-  { href: "/habits", label: "Daily habits" },
+const primaryLinks = [
+  { href: "/check", label: "Check food" },
+  { href: "/cuisines", label: "Takeout" },
+  { href: "/habits", label: "Daily guide" },
+];
+
+const moreLinks = [
   { href: "/stones", label: "Stone types" },
   { href: "/meals", label: "Sample days" },
+  { href: "/oxalate", label: "Oxalate list" },
   { href: "/about", label: "Sources" },
 ];
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const moreActive = moreLinks.some((link) => pathname === link.href);
 
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-paper/95 backdrop-blur">
@@ -35,8 +39,8 @@ export function SiteHeader() {
             <span className="block text-xs text-ink/60">Kidney stone diet guide</span>
           </span>
         </Link>
-        <nav className="flex gap-1 overflow-x-auto" aria-label="Primary">
-          {links.map((link) => {
+        <nav className="flex w-full max-w-full flex-wrap items-center gap-1 sm:w-auto" aria-label="Primary">
+          {primaryLinks.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
@@ -51,6 +55,34 @@ export function SiteHeader() {
               </Link>
             );
           })}
+          <details className="group relative w-full sm:w-auto sm:shrink-0">
+            <summary className={`flex cursor-pointer list-none items-center gap-1 whitespace-nowrap rounded-md px-3 py-2 text-sm font-semibold ${
+              moreActive ? "bg-pine text-paper" : "text-ink hover:bg-mist"
+            } group-open:bg-pine group-open:text-paper`}>
+              More
+              <svg
+                viewBox="0 0 20 20"
+                className="h-4 w-4 transition-transform group-open:rotate-180"
+                aria-hidden="true"
+              >
+                <path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+              </svg>
+            </summary>
+            <div className="mt-1 grid w-full gap-1 rounded-md border border-line bg-card p-2 shadow-lg sm:absolute sm:right-0 sm:top-full sm:z-30 sm:w-52">
+              {moreLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={pathname === link.href ? "page" : undefined}
+                  className={`rounded px-3 py-2 text-sm font-semibold ${
+                    pathname === link.href ? "bg-mist text-pine" : "text-ink hover:bg-mist"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </details>
         </nav>
       </div>
     </header>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { FoodChecker } from "@/components/FoodChecker";
 import { PageIntro, PageShell } from "@/components/PageShell";
-import { verdicts } from "@/lib/model";
 
 export const metadata: Metadata = {
   title: "Check a food",
@@ -12,25 +11,20 @@ export const metadata: Metadata = {
 export default function CheckPage() {
   return (
     <PageShell>
-      <PageIntro eyebrow="Food checker" title="A food is a portion, not a verdict on you">
+      <PageIntro eyebrow="Food and serving checker" title="What can I serve?">
         <p>
-          Pick the stone you are planning around, then search. The labels mean{" "}
-          {verdicts.fits.label.toLowerCase()}, {verdicts.careful.label.toLowerCase()},
-          or {verdicts.limit.label.toLowerCase()}. Almost nothing here is a
-          permanent ban. Star fruit is the exception to skip.
-        </p>
-        <p>
-          Use the cuisine row for Chinese, American, Mexican, Japanese, Indian,
-          and Italian dishes. When a food was measured in the 2020 oxalate
-          handout, the card shows milligrams per serving. The full list is on
-          the Oxalate page. Oxalate, sodium, and purine are also shown as low,
-          moderate, or high.
-          Those are teaching categories. Variety, soil, cooking, and the brand
-          change the milligrams. The checker runs in your browser. The search
-          is not stored.
+          Search an ingredient or restaurant dish, choose a stone type, and
+          start with the serving or ordering note. “Usually fine,” “mind the
+          portion,” and “keep it rare” are general guidance—not guarantees or
+          personal daily limits.
         </p>
       </PageIntro>
       <FoodChecker />
+      <p className="mt-8 text-sm leading-6 text-ink/60">
+        The list covers common foods, not every recipe or restaurant portion.
+        Ask your care team for personal daily limits based on your stone and
+        urine test.
+      </p>
     </PageShell>
   );
 }

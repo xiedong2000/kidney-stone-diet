@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "check": "tsx --test lib/guidance.spec.ts"
+    "check": "tsx --test lib/guidance.spec.ts lib/food-search.spec.ts"
   },
   "dependencies": {
     "next": "16.4.5",
