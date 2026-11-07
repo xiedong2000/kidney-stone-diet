@@ -1,0 +1,60 @@
+import Link from "next/link";
+import { reviewed } from "@/lib/learn";
+
+export function SiteFooter() {
+  return (
+    <footer className="mt-auto border-t border-line bg-pine text-paper">
+      <div className="mx-auto grid w-full max-w-5xl gap-6 px-5 py-10 sm:grid-cols-[1.4fr_1fr]">
+        <div>
+          <p className="font-serif text-2xl">StoneWise</p>
+          <p className="mt-3 max-w-xl text-sm leading-6 text-paper/85">
+            Educational material for adults learning the diet patterns used in
+            kidney-stone prevention. It is not medical advice, a diagnosis, or
+            a personal meal plan. Fever, vomiting, pain you cannot control, or
+            trouble passing urine needs medical care now, not a change in
+            dinner.
+          </p>
+          <p className="mt-3 text-sm text-paper/70">
+            Content reviewed {reviewed}. Nothing you type into the food checker
+            is saved or sent.
+          </p>
+        </div>
+        <div className="text-sm leading-7">
+          <p className="font-semibold">On this site</p>
+          <ul className="mt-1">
+            <li>
+              <Link href="/check" className="underline decoration-paper/40 underline-offset-4">
+                Check a food
+              </Link>
+            </li>
+            <li>
+              <Link href="/cuisines" className="underline decoration-paper/40 underline-offset-4">
+                Cuisines
+              </Link>
+            </li>
+            <li>
+              <Link href="/habits" className="underline decoration-paper/40 underline-offset-4">
+                Daily habits
+              </Link>
+            </li>
+            <li>
+              <Link href="/stones" className="underline decoration-paper/40 underline-offset-4">
+                Stone types
+              </Link>
+            </li>
+            <li>
+              <Link href="/meals" className="underline decoration-paper/40 underline-offset-4">
+                Sample days
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="underline decoration-paper/40 underline-offset-4">
+                Sources and limits
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  );
+}
