@@ -396,7 +396,7 @@ const ingredients: Food[] = [
     oxalate: "not-listed",
     tags: ["plant"],
     aliases: ["peas", "garden peas", "青豌豆", "青碗豆", "豌豆", "碗豆"],
-    tip: "The CCHRC's 2015–2020 general-food chart places green peas in its medium-oxalate group, but gives no amount or serving size. This qualitative category is not a measured value; the site's serving-based reference does not list green peas.",
+    tip: "The CCHRC's 2015–2020 general-food chart places green peas in its medium-oxalate group, but gives no amount or serving size. The serving-based reference lists generic 'Peas' at 1 mg per 1/2 cup without specifying the variety, so that number cannot be confidently assigned to green peas.",
   }),
   food({
     id: "cabbage",

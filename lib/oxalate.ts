@@ -34,7 +34,6 @@ const oxalateLinks: Record<string, string> = {
   broccoli: "Broccoli",
   cabbage: "Cabbage",
   asparagus: "Asparagus",
-  "green-peas": "Peas",
   corn: "Corn",
   cauliflower: "Cauliflower",
   cucumber: "Cucumber",
