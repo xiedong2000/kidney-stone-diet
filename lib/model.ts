@@ -48,6 +48,13 @@ export const foodTags = [
 
 export type FoodTag = (typeof foodTags)[number];
 
+export type FoodImageCredit = {
+  creator: string;
+  license: string;
+  licenseUrl: string;
+  sourceUrl: string;
+};
+
 export type Food = {
   id: string;
   name: string;
@@ -62,6 +69,7 @@ export type Food = {
   tip: string;
   originalName?: string;
   image?: string;
+  imageCredit?: FoodImageCredit;
   chineseMenuGroup?: "takeout" | "home-style";
   avoidReason?: string;
   oxalateMg?: number;

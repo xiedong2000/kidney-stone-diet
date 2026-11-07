@@ -219,13 +219,55 @@ export function FoodChecker({
                 }`}
               >
                 {item.image ? (
-                  <Image
-                    src={item.image}
-                    alt={isChinese ? chineseFoodName(item) : item.originalName ? `${item.name}, ${item.originalName}` : item.name}
-                    width={640}
-                    height={480}
-                    className="h-44 w-full object-cover sm:h-full"
-                  />
+                  <div>
+                    <Image
+                      src={item.image}
+                      alt={item.id === "gai-lan"
+                        ? isChinese
+                          ? "炒芥兰配杏鲍菇（示例做法）"
+                          : "Charred gai lan with king oyster mushrooms (prepared dish)"
+                        : isChinese
+                          ? chineseFoodName(item)
+                          : item.originalName
+                            ? `${item.name}, ${item.originalName}`
+                            : item.name}
+                      width={640}
+                      height={480}
+                      sizes="(min-width: 640px) 176px, 100vw"
+                      loading="lazy"
+                      className="h-44 w-full object-cover sm:h-full"
+                    />
+                    {item.id === "gai-lan" ? (
+                      <p className="px-2 pt-1 text-[10px] leading-4 text-ink/55">
+                        {isChinese
+                          ? "示例做法：芥兰配杏鲍菇"
+                          : "Example preparation: gai lan with king oyster mushrooms"}
+                      </p>
+                    ) : null}
+                    {item.imageCredit ? (
+                      <p className="px-2 py-1 text-[10px] leading-4 text-ink/55">
+                        {isChinese ? "图片：" : "Photo: "}
+                        <a
+                          href={item.imageCredit.sourceUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline underline-offset-2"
+                        >
+                          {item.imageCredit.creator}
+                        </a>
+                        {" · "}
+                        <a
+                          href={item.imageCredit.licenseUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline underline-offset-2"
+                        >
+                          {item.imageCredit.license}
+                        </a>
+                        {" · resized"}
+                      </p>
+                    ) : null}
+                  </div>
                 ) : null}
                 <div className="p-4 sm:p-5">
                 <div className="flex flex-wrap items-start justify-between gap-3">

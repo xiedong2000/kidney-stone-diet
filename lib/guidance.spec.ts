@@ -31,6 +31,7 @@ test("unlisted pepper varieties disclose missing oxalate data", () => {
   assert.equal(verdict("shishito-peppers", "calcium-oxalate"), "careful");
   assert.equal(verdict("japanese-sweet-pepper", "unsure"), "careful");
   assert.equal(verdict("daikon", "calcium-oxalate"), "careful");
+  assert.equal(verdict("gai-lan", "calcium-oxalate"), "careful");
   assert.equal(verdict("shishito-peppers", "uric-acid"), "fits");
   const shishito = foods.find((item) => item.id === "shishito-peppers");
   assert.ok(shishito);
@@ -38,6 +39,17 @@ test("unlisted pepper varieties disclose missing oxalate data", () => {
   const daikon = foods.find((item) => item.id === "daikon");
   assert.ok(daikon);
   assert.match(guidanceFor(daikon, "calcium-oxalate").reason, /does not list this variety/i);
+});
+
+test("produce photos include source and license attribution", () => {
+  for (const id of ["daikon", "shishito-peppers", "gai-lan"]) {
+    const item = foods.find((food) => food.id === id);
+    assert.ok(item, `missing food ${id}`);
+    assert.ok(item.image, `${id} needs a photo`);
+    assert.ok(item.imageCredit, `${id} needs photo attribution`);
+    assert.match(item.imageCredit.sourceUrl, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+    assert.match(item.imageCredit.licenseUrl, /^https:\/\/creativecommons\.org\//);
+  }
 });
 
 test("uric acid targets purines and sugar, not oxalate", () => {
@@ -170,6 +182,17 @@ test("shorter takeout cuisine lists have practical examples", () => {
     for (const dish of cuisineDishes) {
       assert.ok(dish.tip.length > 40, `${dish.id} needs a useful ordering tip`);
     }
+  }
+});
+
+test("openly licensed dish photos include creator and license attribution", () => {
+  for (const id of ["hong-shao-rou", "hui-guo-rou", "di-san-xian", "tang-cu-li-ji"]) {
+    const dish = dishes.find((item) => item.id === id);
+    assert.ok(dish, `missing dish ${id}`);
+    assert.ok(dish.image, `${id} needs a photo`);
+    assert.ok(dish.imageCredit, `${id} needs photo attribution`);
+    assert.match(dish.imageCredit.sourceUrl, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+    assert.match(dish.imageCredit.licenseUrl, /^https:\/\/creativecommons\.org\/licenses\//);
   }
 });
 

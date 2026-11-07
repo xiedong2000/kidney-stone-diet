@@ -1,4 +1,4 @@
-import type { Food, FoodTag, Level } from "@/lib/model";
+import type { Food, FoodImageCredit, FoodTag, Level } from "@/lib/model";
 
 type DishInput = {
   id: string;
@@ -8,6 +8,7 @@ type DishInput = {
   group?: Food["group"];
   originalName?: string;
   image?: string;
+  imageCredit?: FoodImageCredit;
   chineseMenuGroup?: Food["chineseMenuGroup"];
   aliases?: string[];
   oxalate?: Level;
@@ -339,6 +340,13 @@ export const dishes: Food[] = [
     name: "Red-braised pork",
     originalName: "红烧肉",
     cuisine: "chinese",
+    image: "/foods/hong-shao-rou.webp",
+    imageCredit: {
+      creator: "N509FZ",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Red_braised_pork_(20141106191221).JPG",
+    },
     sodium: "high",
     purine: "moderate",
     addedSugar: "moderate",
@@ -362,6 +370,13 @@ export const dishes: Food[] = [
     name: "Sichuan twice-cooked pork",
     originalName: "回锅肉",
     cuisine: "chinese",
+    image: "/foods/hui-guo-rou.webp",
+    imageCredit: {
+      creator: "Alpha",
+      license: "CC BY-SA 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Twice-cooked_Pork_%E5%9B%9E%E9%94%85%E8%82%89_(1648213963).jpg",
+    },
     sodium: "high",
     purine: "moderate",
     tags: ["animal"],
@@ -382,6 +397,13 @@ export const dishes: Food[] = [
     name: "Di san xian (potato, eggplant, and pepper)",
     originalName: "地三鲜",
     cuisine: "chinese",
+    image: "/foods/di-san-xian.webp",
+    imageCredit: {
+      creator: "1700-talet",
+      license: "CC BY 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/3.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Di_san_xian_(home-made).jpg",
+    },
     sodium: "moderate",
     tags: ["plant"],
     aliases: ["di san xian", "地三鮮"],
@@ -402,6 +424,13 @@ export const dishes: Food[] = [
     name: "Chinese sweet-and-sour pork",
     originalName: "糖醋里脊",
     cuisine: "chinese",
+    image: "/foods/tang-cu-li-ji.webp",
+    imageCredit: {
+      creator: "J B",
+      license: "CC BY 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Tangcu_liji.jpg",
+    },
     sodium: "moderate",
     purine: "moderate",
     addedSugar: "high",

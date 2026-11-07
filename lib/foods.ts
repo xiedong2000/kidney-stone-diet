@@ -16,6 +16,7 @@ type FoodInput = {
   cuisine?: Food["cuisine"];
   originalName?: string;
   image?: string;
+  imageCredit?: Food["imageCredit"];
   avoidReason?: string;
 };
 
@@ -395,6 +396,22 @@ const ingredients: Food[] = [
     tip: "A low-oxalate leafy vegetable. Ask for light seasoning or sauce on the side when ordering it out.",
   }),
   food({
+    id: "gai-lan",
+    name: "Gai lan (Chinese broccoli)",
+    group: "vegetables",
+    oxalate: "not-listed",
+    tags: ["plant"],
+    aliases: ["gailan", "gai lan", "Chinese broccoli", "Chinese kale", "芥兰", "芥蘭", "芥蓝", "芥藍"],
+    image: "/foods/gai-lan.webp",
+    imageCredit: {
+      creator: "Daderot",
+      license: "CC0",
+      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Charred_gai-lon_(Chinese_broccoli)_with_king_oyster_mushrooms_-_San_Francisco,_CA.jpg",
+    },
+    tip: "A usual vegetable portion is a reasonable starting point. Gai lan is distinct from ordinary broccoli, and the oxalate reference does not list it separately. Restaurant oyster sauce and other seasonings can add sodium.",
+  }),
+  food({
     id: "bean-sprouts",
     name: "Bean sprouts",
     group: "vegetables",
@@ -481,6 +498,13 @@ const ingredients: Food[] = [
     oxalate: "not-listed",
     tags: ["plant"],
     aliases: ["shishito", "shishito pepper", "Japanese shishito", "Shishito Heirloom Japanese Sweet Pepper", "ししとう", "獅子唐", "獅子唐辛子"],
+    image: "/foods/shishito-peppers.webp",
+    imageCredit: {
+      creator: "Paul2520",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Homegrown_shishito_peppers.jpg",
+    },
     tip: "A usual vegetable-side portion is a reasonable starting point. Restaurant blistered peppers may have added salt; the oxalate reference does not list shishito separately.",
   }),
   food({
@@ -515,6 +539,13 @@ const ingredients: Food[] = [
     oxalate: "not-listed",
     tags: ["plant"],
     aliases: ["daikon radish", "Japanese radish", "Chinese white radish", "白萝卜", "白蘿蔔", "萝卜", "蘿蔔", "luobo", "bailuobo"],
+    image: "/foods/daikon.webp",
+    imageCredit: {
+      creator: "Eric Polk",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Daikon_radish_-_Minowase.jpg",
+    },
     tip: "A usual vegetable portion in soup, stir-fry, or as a side is a reasonable starting point. The reference lists radish at 0 mg per 10 count, but does not specify daikon or a daikon-sized portion, so treat that as a general reference rather than a precise daikon measurement.",
   }),
   food({

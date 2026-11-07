@@ -55,8 +55,33 @@ export function CuisineGuide() {
             alt={dish.originalName ? `${dish.name}, ${dish.originalName}` : dish.name}
             width={640}
             height={480}
+            sizes="(max-width: 640px) 100vw, 50vw"
+            loading="lazy"
             className="mb-3 h-36 w-full rounded-sm object-cover"
           />
+        ) : null}
+        {dish.imageCredit ? (
+          <p className="mb-2 text-[10px] leading-4 text-ink/55">
+            Photo:{" "}
+            <a
+              href={dish.imageCredit.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-2"
+            >
+              {dish.imageCredit.creator}
+            </a>
+            {" · "}
+            <a
+              href={dish.imageCredit.licenseUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-2"
+            >
+              {dish.imageCredit.license}
+            </a>
+            {" · resized"}
+          </p>
         ) : null}
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h3 className="font-semibold text-ink">{chinese ? chineseFoodName(dish) : dish.name}</h3>
