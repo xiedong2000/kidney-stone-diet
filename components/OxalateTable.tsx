@@ -49,7 +49,33 @@ export function OxalateTable() {
       <p className="mt-3 text-sm text-ink/60" aria-live="polite">
         {results.length} servings, highest oxalate first
       </p>
-      <div className="mt-4 overflow-x-auto rounded-md border border-line bg-card">
+      <div className="mt-4 space-y-3 md:hidden">
+        {results.map((row) => {
+          const reading = levelFromOxalateMg(row.mg);
+          const readingLabel =
+            reading === "high" ? "High, 50 mg or more" : reading === "moderate" ? "Portion, 10 to 49 mg" : "Low, under 10 mg";
+          return (
+            <article
+              key={`${row.group}-${row.name}-${row.serving}-${row.mg}`}
+              className="rounded-md border border-line bg-card p-4"
+            >
+              <h2 className="font-semibold text-ink">{row.name}</h2>
+              <p className="text-xs text-ink/50">{row.group}</p>
+              <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
+                <dt className="font-semibold text-ink">Serving</dt>
+                <dd className="text-ink/80">{row.serving}</dd>
+                <dt className="font-semibold text-ink">Oxalate</dt>
+                <dd className="font-semibold text-ink">{row.mg} mg</dd>
+                <dt className="font-semibold text-ink">Handout label</dt>
+                <dd className="text-ink/75">{row.category}</dd>
+                <dt className="font-semibold text-ink">How to read it</dt>
+                <dd className="text-ink/75">{readingLabel}</dd>
+              </dl>
+            </article>
+          );
+        })}
+      </div>
+      <div className="mt-4 hidden overflow-x-auto rounded-md border border-line bg-card md:block">
         <table className="w-full min-w-[40rem] text-left text-sm">
           <thead className="border-b border-line bg-mist text-ink">
             <tr>
