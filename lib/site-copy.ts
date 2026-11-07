@@ -138,6 +138,36 @@ export const siteCopy = {
     cystineText: "参考一般示例日，肉类份量保持不变或更少，并按医生设定的目标饮水，包括夜间。盐应低于典型餐馆饮食。",
     struvite: "感染性结石（磷酸铵镁）",
     struviteText: "保持一般健康饮食。示例饮食不能治疗感染性结石；请遵循清除感染和处理结石的医疗方案。",
+    chineseStyle: {
+      title: "中式家常一日示范",
+      intro: "用熟悉的中式食材搭配结石预防的通用习惯。这是灵活示例，不是“防结石食谱”或个人处方；食材和份量可按个人情况调整。",
+      meals: [
+        ["早餐", "牛奶燕麦粥或馒头，搭配鸡蛋；也可选择无糖酸奶。食物中的钙可作为早餐的一部分。"],
+        ["午餐", "米饭、蒜蓉上海青（bok choy）或卷心菜、少量鸡肉炒豆腐，以及番茄蛋花汤。用少量酱油调味。"],
+        ["晚餐", "清蒸鱼配米饭或面条和西兰花；酱油少放或另放。也可用其他熟悉的蔬菜替换。"],
+      ],
+      notes: [
+        ["钙与豆腐", "通常建议从食物摄取正常钙量，并随餐食用；同餐钙可能帮助减少部分草酸吸收，但不是全天的“保护罩”。豆腐含钙量因制作凝固剂而异，可查看标签；不要自行加用钙补充剂。"],
+        ["留意钠", "酱油、蚝油、汤底和餐馆调味料都可能带来较多钠。可少量量取、酱汁另放，并以少盐烹调为主。"],
+        ["按个人情况调整", "并非所有绿叶菜都需要焯水；对某些高草酸蔬菜，煮后弃水可能降低部分可溶性草酸，但效果因蔬菜和做法而异。茶的草酸也因种类、浓度和份量而异。饮水应分散在一天，并遵循医生给您的目标；没有适合所有人的固定饮水时间或份量。"],
+      ],
+      drinks: "以水为主，全天分次饮用。茶或咖啡可按个人情况和份量安排；若医生要求限水，请遵循其建议。",
+    },
+    chineseStyleEnglish: {
+      title: "A Chinese-style sample day",
+      intro: "A flexible example using familiar Chinese ingredients alongside general stone-prevention habits. This is not a “stone-proof” menu or personal prescription; adapt foods and portions to your needs.",
+      meals: [
+        ["Breakfast", "Oatmeal with milk or a steamed bun with an egg; plain, unsweetened yogurt is another option. Include a food source of calcium with the meal."],
+        ["Lunch", "Rice, garlic bok choy or cabbage, tofu stir-fried with a modest portion of chicken, and tomato-egg soup. Season lightly with soy sauce."],
+        ["Dinner", "Steamed fish with rice or noodles and broccoli; use a little soy sauce or serve it on the side. Swap in another familiar vegetable if you prefer."],
+      ],
+      notes: [
+        ["Calcium and tofu", "Usual calcium from food is generally recommended, including with meals; calcium eaten with a meal may reduce absorption of some oxalate, but it is not an all-day “shield.” Tofu calcium varies by coagulant, so check the label. Do not start calcium supplements without medical advice."],
+        ["Watch sodium", "Soy sauce, oyster sauce, soup bases, and restaurant seasonings can add a lot of sodium. Measure small amounts, ask for sauces on the side, and favor less-salty cooking."],
+        ["Adapt to your needs", "Not every leafy vegetable needs blanching. Boiling and discarding the water may reduce some soluble oxalate in certain high-oxalate vegetables, but the effect varies. Tea oxalate depends on type, strength, and serving size. Spread fluids through the day according to your clinician’s target; there is no one timing or amount that fits everyone."],
+      ],
+      drinks: "Choose water as your main drink and sip through the day. Tea or coffee can fit depending on your preferences and portions. Follow your clinician’s advice if you have a fluid limit.",
+    },
     examples: [
       {
         title: "结石类型未明：一般起点",

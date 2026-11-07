@@ -78,6 +78,23 @@ test("Chinese names and pinyin find common foods", () => {
   assert.equal(findFood("celery").oxalateServing, "1 stalk");
 });
 
+test("CCHRC food names are searchable and qualitative categories stay distinct from measurements", () => {
+  assert.notEqual(foodSearchScore(findFood("beer"), "啤酒"), null);
+  assert.equal(findFood("beer").oxalateMg, 4);
+  assert.equal(findFood("beer").oxalateServing, "1 can");
+  assert.notEqual(foodSearchScore(findFood("draft-beer"), "生啤"), null);
+  assert.equal(findFood("draft-beer").oxalate, "not-listed");
+  assert.equal(findFood("draft-beer").oxalateMg, undefined);
+  assert.notEqual(foodSearchScore(findFood("corn"), "粟米"), null);
+  assert.equal(findFood("corn").oxalateMg, 1);
+  assert.notEqual(foodSearchScore(findFood("green-peas"), "青碗豆"), null);
+  assert.notEqual(foodSearchScore(findFood("watercress"), "西洋菜"), null);
+  assert.notEqual(foodSearchScore(findFood("cilantro"), "莞茜"), null);
+  assert.notEqual(foodSearchScore(findFood("asparagus"), "蘆筍"), null);
+  assert.match(chineseFoodTip(findFood("corn")), /中量草酸/);
+  assert.match(chineseFoodTip(findFood("draft-beer")), /定性分类/);
+});
+
 test("Chinese queries return Chinese food names and serving guidance", () => {
   assert.equal(containsChineseText("葡萄"), true);
   assert.equal(containsChineseText("grapes"), false);
@@ -115,6 +132,21 @@ test("daikon is searchable by Chinese name and keeps its oxalate data explicit",
   assert.equal(findFood("daikon").oxalateMg, undefined);
 });
 
+test("Chinese vegetables are searchable without mixing per-100 g estimates with handout servings", () => {
+  assert.notEqual(foodSearchScore(findFood("water-spinach"), "空心菜"), null);
+  assert.notEqual(foodSearchScore(findFood("water-spinach"), "ong choy"), null);
+  assert.equal(findFood("water-spinach").oxalate, "high");
+  assert.equal(findFood("water-spinach").oxalateMg, undefined);
+  assert.notEqual(foodSearchScore(findFood("chinese-chives"), "韭菜"), null);
+  assert.equal(findFood("chinese-chives").oxalate, "moderate");
+  assert.notEqual(foodSearchScore(findFood("garlic-shoots"), "蒜苗"), null);
+  assert.notEqual(foodSearchScore(findFood("garlic-scapes"), "蒜苔"), null);
+  assert.notEqual(foodSearchScore(findFood("houttuynia"), "折耳根"), null);
+  assert.equal(findFood("houttuynia").oxalate, "not-listed");
+  assert.equal(chineseFoodName(findFood("water-spinach")), "空心菜");
+  assert.match(chineseFoodTip(findFood("chinese-chives")), /162–166 毫克/);
+});
+
 test("lamb is searchable by English and Chinese names", () => {
   assert.notEqual(foodSearchScore(findFood("lamb"), "lamb"), null);
   assert.notEqual(foodSearchScore(findFood("lamb"), "mutton"), null);
@@ -127,5 +159,6 @@ test("ingredient lists match known components and report unknown ones", () => {
   assert.deepEqual(terms, ["beef", "bok choy", "watercress"]);
   assert.notEqual(foodSearchScoreForTerms(findFood("beef"), terms), null);
   assert.notEqual(foodSearchScoreForTerms(findFood("bok-choy-vegetable"), terms), null);
-  assert.deepEqual(unmatchedFoodSearchTerms("beef, watercress", foods), ["watercress"]);
+  assert.notEqual(foodSearchScoreForTerms(findFood("watercress"), terms), null);
+  assert.deepEqual(unmatchedFoodSearchTerms("beef, unknown greens", foods), ["unknown greens"]);
 });

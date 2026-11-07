@@ -83,6 +83,7 @@ const oxalateLinks: Record<string, string> = {
   walnuts: "Walnuts",
   tofu: "Tofu",
   "miso-soup": "Miso Soup",
+  beer: "Beer (Regular)",
   "burger-fries": "French Fries (homemade or fast food)",
   pizza: "Pizza with Cheese",
   "street-tacos": "Tacos",

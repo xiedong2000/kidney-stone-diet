@@ -298,6 +298,12 @@ export const sources = [
     note: "Serving-by-serving oxalate values used on this site, from the spreadsheet exported on June 16, 2020. The sheet's own Very High label starts near 12 mg per serving. The checker treats 50 mg or more as high.",
   },
   {
+    name: "Chinese Community Health Resource Center",
+    title: "Oxalate Content of Foods (Chinese-language handout)",
+    href: "https://www.cchrchealth.org/sites/default/files/files/t_oxalate_content.pdf",
+    note: "A 2015–2020 general-food chart that groups foods as small, medium, or large without giving amounts or serving sizes. It is a useful qualitative reference, not a current quantitative database or individualized treatment guideline; categories may differ from serving-based measurements.",
+  },
+  {
     name: "National Institute of Diabetes and Digestive and Kidney Diseases",
     title: "Eating, Diet, & Nutrition for Kidney Stones",
     href: "https://www.niddk.nih.gov/health-information/urologic-diseases/kidney-stones/eating-diet-nutrition",
