@@ -18,8 +18,8 @@ export function PageIntro({
   title,
   children,
 }: {
-  eyebrow: string;
-  title: string;
+  eyebrow: ReactNode;
+  title: ReactNode;
   children: ReactNode;
 }) {
   return (

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import { useLanguage } from "@/components/LanguageProvider";
 import {
   foodSearchScoreForTerms,
   splitFoodSearchTerms,
@@ -20,6 +21,8 @@ import {
   chineseUi,
   chineseVerdict,
   containsChineseText,
+  foodDisplayNames,
+  foodSummary,
 } from "@/lib/chinese-localization";
 import {
   cuisines,
@@ -38,16 +41,16 @@ const verdictStyle = {
 } as const;
 
 export function FoodChecker({
-  onLanguageChange,
+  isChinese,
 }: {
-  onLanguageChange?: (isChinese: boolean) => void;
+  isChinese: boolean;
 }) {
+  const { setLanguage } = useLanguage();
   const [focus, setFocus] = useState<StoneFocusId>("unsure");
   const [group, setGroup] = useState<FoodGroup>("asked");
   const [cuisine, setCuisine] = useState<Cuisine>("all");
   const [search, setSearch] = useState("");
 
-  const isChinese = containsChineseText(search);
   const copy = chineseUi();
   const selected = stoneFocuses.find((item) => item.id === focus) ?? stoneFocuses[0];
   const selectedChinese = chineseFocus(focus);
@@ -58,8 +61,8 @@ export function FoodChecker({
   const results = useMemo(() => {
     const pool = foods.filter((item) => {
       if (query && foodSearchScoreForTerms(item, searchParts) === null) return false;
-      if (cuisine !== "all" && item.cuisine !== cuisine && item.cuisine !== "everyday") return false;
-      if (group !== "asked" && group !== "all" && item.group !== group) return false;
+      if (!query && cuisine !== "all" && item.cuisine !== cuisine && item.cuisine !== "everyday") return false;
+      if (!query && group !== "asked" && group !== "all" && item.group !== group) return false;
       if (query) return true;
       if (group === "asked") {
         if (cuisine !== "all") return true;
@@ -99,7 +102,7 @@ export function FoodChecker({
             onChange={(event) => {
               const value = event.target.value;
               setSearch(value);
-              onLanguageChange?.(containsChineseText(value));
+              if (containsChineseText(value)) setLanguage("zh");
             }}
             placeholder={isChinese ? copy.searchPlaceholder : "Search a dish or list ingredients"}
             autoComplete="off"
@@ -192,10 +195,22 @@ export function FoodChecker({
           </p>
         </div>
       ) : (
-        <ul className="mt-6 grid gap-3">
+        <>
+        {!query && group === "asked" && cuisine === "all" ? (
+          <div className="mt-6">
+            <h2 className="font-serif text-2xl text-ink">
+              {isChinese ? "常见查询（示例）" : "Common questions"}
+            </h2>
+            <p className="mt-1 text-sm text-ink/65">
+              {isChinese ? "这些是常见食物示例，不是完整清单。" : "A few common examples to get started—not the full food list."}
+            </p>
+          </div>
+        ) : null}
+        <ul className="mt-4 grid gap-3">
           {results.map((item) => {
             const guidance = guidanceFor(item, focus);
             const verdict = verdicts[guidance.verdict];
+            const names = foodDisplayNames(item, isChinese);
             return (
               <li
                 key={item.id}
@@ -215,9 +230,9 @@ export function FoodChecker({
                 <div className="p-4 sm:p-5">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
-                    <h2 className="font-serif text-2xl text-ink">{isChinese ? chineseFoodName(item) : item.name}</h2>
-                    {!isChinese && item.originalName ? (
-                      <p className="text-sm text-ink/55">{item.originalName}</p>
+                    <h2 className="font-serif text-2xl text-ink">{names.primary}</h2>
+                    {names.secondary ? (
+                      <p className="text-sm text-ink/55">{names.secondary}</p>
                     ) : null}
                   </div>
                   <p
@@ -230,24 +245,30 @@ export function FoodChecker({
                   <span className="font-semibold text-ink">
                     {isChinese ? copy.servingNote : "Serving / ordering note: "}
                   </span>
-                  {isChinese ? chineseFoodTip(item) : item.tip}
+                  {foodSummary(item, isChinese)}
                 </p>
-                {item.oxalateMg != null && item.oxalateServing ? (
-                  <p className="mt-2 text-sm text-pine">
-                    {isChinese ? copy.oxalatePortion : "Oxalate reference portion: "}
-                    {item.oxalateMg} mg /{" "}
-                    {item.id === "tofu"
-                      ? isChinese ? "3.5 盎司（约 100 克，按重量）" : "3.5 oz (about 100 g by weight)"
-                      : isChinese ? chineseServing(item.oxalateServing) : item.oxalateServing}
-                    {item.id === "tofu"
-                      ? isChinese ? `。${copy.referenceOnly}` : ". This is a reference amount, not a daily limit."
-                      : ""}
-                  </p>
-                ) : null}
                 <details className="mt-3 rounded-md bg-paper/70 px-3 py-2">
                   <summary className="cursor-pointer text-sm font-semibold text-pine">
                     {isChinese ? copy.why : "Why this suggestion?"}
                   </summary>
+                  <p className="mt-2 text-sm leading-6 text-ink/75">
+                    <span className="font-semibold text-ink">
+                      {isChinese ? copy.servingNote : "Serving / ordering note: "}
+                    </span>
+                    {isChinese ? chineseFoodTip(item) : item.tip}
+                  </p>
+                  {item.oxalateMg != null && item.oxalateServing ? (
+                    <p className="mt-2 text-sm text-pine">
+                      {isChinese ? copy.oxalatePortion : "Oxalate reference portion: "}
+                      {item.oxalateMg} mg /{" "}
+                      {item.id === "tofu"
+                        ? isChinese ? "3.5 盎司（约 100 克，按重量）" : "3.5 oz (about 100 g by weight)"
+                        : isChinese ? chineseServing(item.oxalateServing) : item.oxalateServing}
+                      {item.id === "tofu"
+                        ? isChinese ? `。${copy.referenceOnly}` : ". This is a reference amount, not a daily limit."
+                        : ""}
+                    </p>
+                  ) : null}
                   <p className="mt-2 text-sm leading-6 text-ink/75">
                     {isChinese ? chineseGuidance(item, focus, guidance.verdict) : guidance.reason}
                   </p>
@@ -276,6 +297,7 @@ export function FoodChecker({
             );
           })}
         </ul>
+        </>
       )}
     </div>
   );

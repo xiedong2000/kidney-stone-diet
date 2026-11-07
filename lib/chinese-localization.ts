@@ -3,6 +3,7 @@ import type { Food, Guidance, StoneFocusId } from "@/lib/model";
 type FoodTranslation = {
   name: string;
   tip: string;
+  summary?: string;
 };
 
 const foodTranslations: Record<string, FoodTranslation> = {
@@ -33,6 +34,7 @@ const foodTranslations: Record<string, FoodTranslation> = {
   spinach: {
     name: "菠菜",
     tip: "参考资料列出熟菠菜每半杯含 755 mg 草酸、每杯生菠菜含 656 mg。若要吃，份量宜小，并在同一餐搭配牛奶、酸奶或奶酪等含钙食物。",
+    summary: "若要吃菠菜，份量宜小，并在同一餐搭配含钙食物。",
   },
   broccoli: { name: "西兰花", tip: "低草酸蔬菜，通常可以作为日常蔬菜食用。" },
   cabbage: {
@@ -50,14 +52,17 @@ const foodTranslations: Record<string, FoodTranslation> = {
   celery: {
     name: "芹菜",
     tip: "参考资料列出生芹菜每根含 3 mg 草酸；熟芹菜每杯含 10 mg。这些是参考份量，不是每日上限。餐馆汤品和炒菜的汤底或酱汁可能含较多钠。",
+    summary: "普通份量可以；餐馆汤底和酱汁可能含较多钠。",
   },
   daikon: {
     name: "白萝卜（大根）",
     tip: "作为汤、炒菜或配菜的一般蔬菜份量通常是合理的起点。参考资料中的“萝卜”每 10 个列为 0 mg，但没有说明是白萝卜或对应的白萝卜份量，因此不能当作白萝卜的精确测量值。",
+    summary: "可作为汤、炒菜或配菜的一般蔬菜份量。",
   },
   corn: {
     name: "玉米",
     tip: "一般份量通常适合许多结石预防饮食。参考资料列出半杯玉米含 1 mg 草酸；另需留意咸黄油或调味料。",
+    summary: "一般份量可以；留意咸黄油或调味料。",
   },
   eggs: {
     name: "鸡蛋",
@@ -87,6 +92,7 @@ const foodTranslations: Record<string, FoodTranslation> = {
   tofu: {
     name: "豆腐",
     tip: "注意份量。钙盐点制的豆腐也算含钙食物；草酸为中等水平，钙草酸结石患者通常可适量食用。参考份量 3.5 盎司约为 100 克（按重量），不是每日上限。",
+    summary: "钙盐点制的豆腐也算含钙食物，注意份量。",
   },
   yogurt: {
     name: "原味酸奶",
@@ -172,6 +178,11 @@ const foodTranslations: Record<string, FoodTranslation> = {
     name: "葱油饼",
     tip: "可作为一份谷物主食。餐馆版本可能较咸或较油。",
   },
+  "instant-tea": {
+    name: "速溶甜茶",
+    tip: "参考资料列出甜味速溶冰茶每杯草酸为 0 mg，而冲泡茶每杯为 14 mg。但添加糖仍需留意，日常更建议选择水或无糖茶。",
+    summary: "草酸参考值低，但添加糖较多，日常更建议选择水或无糖茶。",
+  },
 };
 
 const focusTranslations: Record<StoneFocusId, { label: string; summary: string }> = {
@@ -236,13 +247,60 @@ export function containsChineseText(value: string): boolean {
 export function chineseFoodName(food: Food): string {
   return (
     foodTranslations[food.id]?.name ??
-    food.aliases.find(containsChineseText) ??
-    (food.originalName && containsChineseText(food.originalName) ? food.originalName : food.name)
+    (food.originalName && containsChineseText(food.originalName)
+      ? food.originalName
+      : food.aliases.find(containsChineseText) ?? food.name)
   );
+}
+
+export function foodDisplayNames(food: Food, isChinese: boolean): {
+  primary: string;
+  secondary?: string;
+} {
+  if (!isChinese) {
+    return {
+      primary: food.name,
+      secondary: food.originalName && containsChineseText(food.originalName)
+        ? food.originalName
+        : undefined,
+    };
+  }
+
+  const primary = chineseFoodName(food);
+  return {
+    primary,
+    secondary: primary === food.name ? undefined : food.name,
+  };
 }
 
 export function chineseFoodTip(food: Food): string {
   return foodTranslations[food.id]?.tip ?? "请按一般份量食用；若有个人饮食限制，请遵循医疗团队的建议。";
+}
+
+const conciseTips: Record<string, string> = {
+  spinach: "Keep spinach portions small and pair them with a calcium food at the same meal.",
+  celery: "A usual portion fits; restaurant soups and sauces can add sodium.",
+  daikon: "A usual vegetable portion works in soup, stir-fry, or as a side.",
+  corn: "A half-cup is a reference serving; watch salty butter and toppings.",
+  tofu: "Calcium-set tofu can count as a calcium food; mind the portion.",
+  "instant-tea": "The handout rates sweetened instant tea low for oxalate, but its added sugar still matters.",
+};
+
+function firstSentence(value: string): string {
+  const end = value.search(/[.!?](?:\s|$)/);
+  return end < 0 ? value : value.slice(0, end + 1);
+}
+
+export function foodSummary(food: Food, isChinese: boolean): string {
+  if (isChinese) {
+    const translated = foodTranslations[food.id];
+    if (translated?.summary) return translated.summary;
+    return firstSentence(translated?.tip ?? chineseFoodTip(food));
+  }
+  const tip = conciseTips[food.id] ?? firstSentence(food.tip);
+  return /\b\d+(?:\.\d+)?\s*mg\b/i.test(tip)
+    ? "Use a usual portion; see details for serving guidance."
+    : tip;
 }
 
 export function chineseFocus(focus: StoneFocusId) {

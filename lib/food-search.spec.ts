@@ -11,6 +11,8 @@ import {
   chineseFoodName,
   chineseFoodTip,
   containsChineseText,
+  foodDisplayNames,
+  foodSummary,
 } from "./chinese-localization";
 
 function findFood(id: string) {
@@ -80,8 +82,18 @@ test("Chinese queries return Chinese food names and serving guidance", () => {
   assert.equal(containsChineseText("葡萄"), true);
   assert.equal(containsChineseText("grapes"), false);
   assert.equal(chineseFoodName(findFood("grapes")), "葡萄");
+  assert.deepEqual(foodDisplayNames(findFood("grapes"), true), {
+    primary: "葡萄",
+    secondary: "Grapes",
+  });
   assert.match(chineseFoodTip(findFood("grapes")), /葡萄干/);
   assert.equal(chineseFoodName(findFood("beef-noodle-soup")), "牛肉面");
+  assert.deepEqual(foodDisplayNames(findFood("beef-noodle-soup"), true), {
+    primary: "牛肉面",
+    secondary: "Beef noodle soup",
+  });
+  assert.doesNotMatch(foodSummary(findFood("instant-tea"), false), /\d+\s*mg/i);
+  assert.doesNotMatch(foodSummary(findFood("corn"), false), /\d+\s*mg/i);
 });
 
 test("pepper varieties are searchable without borrowing bell-pepper oxalate data", () => {

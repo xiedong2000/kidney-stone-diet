@@ -119,12 +119,12 @@ const ingredients: Food[] = [
   }),
   food({
     id: "instant-tea",
-    name: "Instant tea",
+    name: "Sweetened instant iced tea",
     group: "drinks",
-    oxalate: "high",
+    addedSugar: "high",
     tags: ["fluid"],
-    aliases: ["powdered iced tea"],
-    tip: "This handout lists sweetened instant iced tea at 0 mg per cup, and brewed tea at 14 mg per cup. Other stone lists treat powdered tea as high. If your urine oxalate is high, count the brewed cup and do not assume every powdered tea is zero.",
+    aliases: ["instant tea", "powdered iced tea", "sweetened instant tea"],
+    tip: "This handout lists sweetened instant iced tea at 0 mg oxalate per cup, while brewed tea is 14 mg per cup. That does not make the added sugar a good everyday choice; choose water or unsweetened tea more often.",
   }),
   food({
     id: "milk",

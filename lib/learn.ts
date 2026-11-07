@@ -244,7 +244,7 @@ export const mealPlans = [
       },
     ],
     drinks:
-      "Water through the day, including evening. Lemon water is reasonable. Instant tea and sweet tea stay out.",
+      "Water through the day, including evening. Lemon water is reasonable. The handout lists sweetened instant iced tea at 0 mg oxalate per cup, but its added sugar is still a reason to choose water or unsweetened tea more often.",
   },
   {
     id: "uric-acid",

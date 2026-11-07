@@ -100,7 +100,10 @@ test("cuisine dishes follow salt, oxalate, and purine", () => {
   assert.equal(verdict("orange", "calcium-oxalate"), "careful");
   assert.equal(verdict("strawberries", "calcium-oxalate"), "fits");
   assert.equal(verdict("oatmeal", "calcium-oxalate"), "fits");
-  assert.equal(verdict("instant-tea", "calcium-oxalate"), "fits");
+  assert.equal(verdict("instant-tea", "calcium-oxalate"), "limit");
+  const instantTea = foods.find((item) => item.id === "instant-tea");
+  assert.equal(instantTea?.oxalateMg, 0);
+  assert.equal(instantTea?.oxalate, "low");
   assert.equal(verdict("miso-soup", "calcium-oxalate"), "limit");
   const spinach = foods.find((item) => item.id === "spinach");
   assert.equal(spinach?.oxalateMg, 755);
