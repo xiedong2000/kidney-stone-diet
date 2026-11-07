@@ -317,7 +317,7 @@ const ingredients: Food[] = [
     purine: "moderate",
     tags: ["plant"],
     aliases: ["baby spinach", "spinach salad", "cooked spinach", "菠菜", "bocai"],
-    image: "/foods/spinach.jpg",
+    image: "/foods/spinach.webp",
     tip: "Cooked spinach is 755 mg per half cup on the handout, and raw spinach is 656 mg per cup. Boiling and discarding the water lowers oxalate. If you eat it, use a small amount and have milk, yogurt, or cheese at that meal.",
   }),
   food({

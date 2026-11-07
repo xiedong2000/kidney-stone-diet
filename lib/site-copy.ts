@@ -71,6 +71,12 @@ export const siteCopy = {
       "扁豆和印度酸奶酱都是选择；若关注草酸，询问菠菜含量高的菜品。",
       "简单番茄意面较灵活；加工肉配料和菠菜馅料会影响选择。",
     ],
+    chineseGroups: {
+      takeout: "常见中餐外卖",
+      takeoutDescription: "常见餐馆菜单和外卖选择；配方和调味可能因店而异。",
+      homeStyle: "中式家常与地方菜",
+      homeStyleDescription: "家常菜和中国各地的代表性菜肴。",
+    },
     why: "为什么这样建议？",
   },
   oxalate: {

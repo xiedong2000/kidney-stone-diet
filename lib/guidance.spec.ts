@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
+import { dishes } from "./dishes";
 import { featuredFoodIds, foods } from "./foods";
 import { guidanceFor } from "./guidance";
 import { stoneFocuses, type StoneFocusId, type Verdict } from "./model";
@@ -111,6 +112,65 @@ test("cuisine dishes follow salt, oxalate, and purine", () => {
   const orange = foods.find((item) => item.id === "orange");
   assert.match(guidanceFor(orange!, "calcium-oxalate").reason, /29 mg/);
   assert.notEqual(verdict("cashews", "calcium-oxalate"), "limit");
+});
+
+test("shorter takeout cuisine lists have practical examples", () => {
+  const chineseDishes = dishes.filter((dish) => dish.cuisine === "chinese");
+  assert.ok(
+    chineseDishes.length >= 33,
+    `Chinese list has ${chineseDishes.length} dishes; expected at least 33`,
+  );
+  for (const dish of chineseDishes) {
+    assert.match(dish.originalName ?? "", /\p{Script=Han}/u, `${dish.id} needs a Chinese name`);
+    assert.ok(dish.tip.length > 40, `${dish.id} needs a useful ordering tip`);
+    assert.ok(dish.chineseMenuGroup, `${dish.id} needs a Chinese menu group`);
+  }
+  for (const id of [
+    "fried-rice",
+    "milk-tea",
+    "kung-pao",
+    "char-siu-bao",
+    "egg-drop-soup",
+    "beef-broccoli",
+    "lo-mein",
+    "spring-rolls",
+    "orange-chicken",
+  ]) {
+    assert.equal(
+      chineseDishes.find((dish) => dish.id === id)?.chineseMenuGroup,
+      "takeout",
+      `${id} should be in the takeout group`,
+    );
+  }
+  for (const id of [
+    "hong-shao-rou",
+    "yu-xiang-rou-si",
+    "hui-guo-rou",
+    "hot-and-sour-soup",
+    "di-san-xian",
+    "shou-si-bao-cai",
+    "tang-cu-li-ji",
+  ]) {
+    assert.ok(chineseDishes.some((dish) => dish.id === id), `missing Chinese dish ${id}`);
+  }
+
+  const minimums = {
+    american: 7,
+    indian: 6,
+    italian: 6,
+    japanese: 7,
+  } as const;
+
+  for (const [cuisine, minimum] of Object.entries(minimums)) {
+    const cuisineDishes = dishes.filter((dish) => dish.cuisine === cuisine);
+    assert.ok(
+      cuisineDishes.length >= minimum,
+      `${cuisine} has ${cuisineDishes.length} dishes; expected at least ${minimum}`,
+    );
+    for (const dish of cuisineDishes) {
+      assert.ok(dish.tip.length > 40, `${dish.id} needs a useful ordering tip`);
+    }
+  }
 });
 
 test("shared safety calls", () => {

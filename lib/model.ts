@@ -62,6 +62,7 @@ export type Food = {
   tip: string;
   originalName?: string;
   image?: string;
+  chineseMenuGroup?: "takeout" | "home-style";
   avoidReason?: string;
   oxalateMg?: number;
   oxalateServing?: string;

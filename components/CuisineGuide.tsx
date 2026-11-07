@@ -28,6 +28,53 @@ export function CuisineGuide() {
   const [focus, setFocus] = useState<(typeof stoneFocuses)[number]["id"]>("unsure");
   const { language } = useLanguage();
   const chinese = language === "zh";
+  const chineseGroups = [
+    {
+      id: "takeout",
+      title: chinese ? siteCopy.cuisines.chineseGroups.takeout : "Chinese takeout favorites",
+      description: chinese
+        ? siteCopy.cuisines.chineseGroups.takeoutDescription
+        : "Familiar restaurant and takeout dishes; recipes and seasoning vary by restaurant.",
+    },
+    {
+      id: "home-style",
+      title: chinese ? siteCopy.cuisines.chineseGroups.homeStyle : "Chinese home-style and regional dishes",
+      description: chinese
+        ? siteCopy.cuisines.chineseGroups.homeStyleDescription
+        : "Home cooking and dishes representing regional Chinese cuisines.",
+    },
+  ] as const;
+
+  function renderDishCard(dish: Food) {
+    const guidance = guidanceFor(dish, focus);
+    return (
+      <li key={dish.id} className="rounded-md bg-paper/70 p-3">
+        {dish.image ? (
+          <Image
+            src={dish.image}
+            alt={dish.originalName ? `${dish.name}, ${dish.originalName}` : dish.name}
+            width={640}
+            height={480}
+            className="mb-3 h-36 w-full rounded-sm object-cover"
+          />
+        ) : null}
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h3 className="font-semibold text-ink">{chinese ? chineseFoodName(dish) : dish.name}</h3>
+          <span className={`rounded-full border px-2.5 py-1 text-xs font-semibold ${verdictStyle[guidance.verdict]}`}>
+            {chinese ? chineseVerdict(guidance.verdict) : verdicts[guidance.verdict].label}
+          </span>
+        </div>
+        {chinese && dish.name !== chineseFoodName(dish) ? <p className="text-xs text-ink/55">{dish.name}</p> : dish.originalName ? <p className="text-xs text-ink/55">{dish.originalName}</p> : null}
+        <p className="mt-1 text-sm leading-6 text-ink/75">{chinese ? chineseFoodTip(dish) : dish.tip}</p>
+        <details className="mt-2 rounded-sm bg-card/70 px-2.5 py-2">
+          <summary className="cursor-pointer text-xs font-semibold text-pine">
+            {chinese ? "为什么这样建议？" : "Why this suggestion?"}
+          </summary>
+          <p className="mt-1 text-xs leading-5 text-ink/70">{chinese ? chineseGuidance(dish, focus, guidance.verdict) : guidance.reason}</p>
+        </details>
+      </li>
+    );
+  }
 
   return (
     <>
@@ -70,38 +117,28 @@ export function CuisineGuide() {
                 <span className="font-serif text-2xl text-ink">{chinese ? siteCopy.cuisines.nav[sections.indexOf(section)] : section.title}</span>
                 <span className="text-sm text-ink/65">{chinese ? siteCopy.cuisines.sections[sections.indexOf(section)] : section.text}</span>
               </summary>
-              <ul className="grid gap-3 border-t border-line p-4 sm:grid-cols-2">
-                {items.map((dish) => {
-                  const guidance = guidanceFor(dish, focus);
-                  return (
-                    <li key={dish.id} className="rounded-md bg-paper/70 p-3">
-                      {dish.image ? (
-                        <Image
-                          src={dish.image}
-                          alt={dish.originalName ? `${dish.name}, ${dish.originalName}` : dish.name}
-                          width={640}
-                          height={480}
-                          className="mb-3 h-36 w-full rounded-sm object-cover"
-                        />
-                      ) : null}
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <h3 className="font-semibold text-ink">{chinese ? chineseFoodName(dish) : dish.name}</h3>
-                        <span className={`rounded-full border px-2.5 py-1 text-xs font-semibold ${verdictStyle[guidance.verdict]}`}>
-                          {chinese ? chineseVerdict(guidance.verdict) : verdicts[guidance.verdict].label}
-                        </span>
-                      </div>
-                      {chinese && dish.name !== chineseFoodName(dish) ? <p className="text-xs text-ink/55">{dish.name}</p> : dish.originalName ? <p className="text-xs text-ink/55">{dish.originalName}</p> : null}
-                      <p className="mt-1 text-sm leading-6 text-ink/75">{chinese ? chineseFoodTip(dish) : dish.tip}</p>
-                      <details className="mt-2 rounded-sm bg-card/70 px-2.5 py-2">
-                        <summary className="cursor-pointer text-xs font-semibold text-pine">
-                          {chinese ? "为什么这样建议？" : "Why this suggestion?"}
-                        </summary>
-                        <p className="mt-1 text-xs leading-5 text-ink/70">{chinese ? chineseGuidance(dish, focus, guidance.verdict) : guidance.reason}</p>
-                      </details>
-                    </li>
-                  );
-                })}
-              </ul>
+              {section.id === "chinese" ? (
+                <div className="space-y-6 border-t border-line p-4">
+                  {chineseGroups.map((group) => {
+                    const groupItems = items.filter(
+                      (item) => item.chineseMenuGroup === group.id,
+                    );
+                    return (
+                      <section key={group.id}>
+                        <h3 className="font-serif text-xl text-ink">{group.title}</h3>
+                        <p className="mt-1 text-sm text-ink/65">{group.description}</p>
+                        <ul className="mt-3 grid gap-3 sm:grid-cols-2">
+                          {groupItems.map(renderDishCard)}
+                        </ul>
+                      </section>
+                    );
+                  })}
+                </div>
+              ) : (
+                <ul className="grid gap-3 border-t border-line p-4 sm:grid-cols-2">
+                  {items.map(renderDishCard)}
+                </ul>
+              )}
             </details>
           );
         })}
