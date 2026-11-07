@@ -9,13 +9,13 @@ import { dishes } from "@/lib/dishes";
 import { guidanceFor } from "@/lib/guidance";
 import { stoneFocuses, verdicts, type Food } from "@/lib/model";
 
-const sections: { id: Food["cuisine"]; title: string; text: string }[] = [
-  { id: "chinese", title: "Chinese", text: "Try steamed or plain dishes; ask for salty sauces on the side." },
-  { id: "american", title: "American", text: "Choose a simple grilled plate; go easy on processed meat, sauces, and fries." },
-  { id: "mexican", title: "Mexican", text: "Tacos with corn tortillas can be easier to portion than oversized combo meals." },
-  { id: "japanese", title: "Japanese", text: "Fish and rice are flexible choices; broth and soy-based sauces can be salty." },
-  { id: "indian", title: "Indian", text: "Dal and raita are options; ask about spinach-heavy dishes if oxalate is a concern." },
-  { id: "italian", title: "Italian", text: "Simple tomato pasta is flexible; processed-meat toppings and spinach fillings may change the choice." },
+const sections: { id: Food["cuisine"]; title: string; text: string; thumbnail: string }[] = [
+  { id: "chinese", title: "Chinese", text: "Try steamed or plain dishes; ask for salty sauces on the side.", thumbnail: "/foods/cuisines/chinese.webp" },
+  { id: "american", title: "American", text: "Choose a simple grilled plate; go easy on processed meat, sauces, and fries.", thumbnail: "/foods/cuisines/american.webp" },
+  { id: "mexican", title: "Mexican", text: "Tacos with corn tortillas can be easier to portion than oversized combo meals.", thumbnail: "/foods/cuisines/mexican.webp" },
+  { id: "japanese", title: "Japanese", text: "Fish and rice are flexible choices; broth and soy-based sauces can be salty.", thumbnail: "/foods/cuisines/japanese.webp" },
+  { id: "indian", title: "Indian", text: "Dal and raita are options; ask about spinach-heavy dishes if oxalate is a concern.", thumbnail: "/foods/cuisines/indian.webp" },
+  { id: "italian", title: "Italian", text: "Simple tomato pasta is flexible; processed-meat toppings and spinach fillings may change the choice.", thumbnail: "/foods/cuisines/italian.webp" },
 ];
 
 const verdictStyle = {
@@ -114,7 +114,18 @@ export function CuisineGuide() {
               className="group scroll-mt-6 rounded-md border border-line bg-card"
             >
               <summary className="flex cursor-pointer list-none flex-wrap items-baseline justify-between gap-x-4 gap-y-1 p-4">
-                <span className="font-serif text-2xl text-ink">{chinese ? siteCopy.cuisines.nav[sections.indexOf(section)] : section.title}</span>
+                <span className="flex items-center gap-3">
+                  <Image
+                    src={section.thumbnail}
+                    alt=""
+                    width={48}
+                    height={48}
+                    loading="lazy"
+                    unoptimized
+                    className="h-12 w-12 rounded-sm object-cover"
+                  />
+                  <span className="font-serif text-2xl text-ink">{chinese ? siteCopy.cuisines.nav[sections.indexOf(section)] : section.title}</span>
+                </span>
                 <span className="text-sm text-ink/65">{chinese ? siteCopy.cuisines.sections[sections.indexOf(section)] : section.text}</span>
               </summary>
               {section.id === "chinese" ? (
