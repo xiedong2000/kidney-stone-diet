@@ -53,7 +53,13 @@ export default function CuisinesPage() {
           <Link href="/check" className="font-semibold text-pine underline decoration-pine/30 underline-offset-4">
             food and serving checker
           </Link>
-          . Restaurant portions vary; these are starting points, not guarantees.
+          . These are examples, not a complete restaurant-menu list. If a dish
+          is not listed, search its main ingredients separately in the{" "}
+          <Link href="/check" className="font-semibold text-pine underline decoration-pine/30 underline-offset-4">
+            food and serving checker
+          </Link>
+          . Recipes and portions vary, so confirm ingredients and sauces with
+          the restaurant.
         </p>
       </PageIntro>
 

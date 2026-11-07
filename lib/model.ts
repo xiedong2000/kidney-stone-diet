@@ -1,5 +1,6 @@
 export const levels = ["low", "moderate", "high"] as const;
 export type Level = (typeof levels)[number];
+export type OxalateLevel = Level | "not-listed";
 
 export const foodGroups = [
   { id: "asked", label: "Often asked" },
@@ -53,7 +54,7 @@ export type Food = {
   aliases: string[];
   group: Exclude<FoodGroup, "asked" | "all">;
   cuisine: Exclude<Cuisine, "all">;
-  oxalate: Level;
+  oxalate: OxalateLevel;
   sodium: Level;
   purine: Level;
   addedSugar: Level;

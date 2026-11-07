@@ -8,7 +8,7 @@ type FoodInput = {
   group: Food["group"];
   tip: string;
   aliases?: string[];
-  oxalate?: Level;
+  oxalate?: Food["oxalate"];
   sodium?: Level;
   purine?: Level;
   addedSugar?: Level;
@@ -38,7 +38,7 @@ const ingredients: Food[] = [
     name: "Water",
     group: "drinks",
     tags: ["fluid"],
-    aliases: ["tap water", "plain water"],
+    aliases: ["tap water", "plain water", "水", "shui"],
     tip: "Spread it from morning through a glass in the evening. Many adults with stones are taught to drink enough to make at least 2.5 liters of urine a day, unless fluid has been limited.",
   }),
   food({
@@ -54,7 +54,7 @@ const ingredients: Food[] = [
     name: "Lemon or lime, the fruit",
     group: "fruit",
     tags: ["citrate"],
-    aliases: ["lemon", "lime", "citrus wedge"],
+    aliases: ["lemon", "lime", "citrus wedge", "柠檬", "檸檬"],
     tip: "A wedge in water is a simple daily habit. The fruit itself is not a high-oxalate problem.",
   }),
   food({
@@ -70,7 +70,7 @@ const ingredients: Food[] = [
     name: "Orange, the fruit",
     group: "fruit",
     tags: ["citrate"],
-    aliases: ["oranges", "clementine", "mandarin"],
+    aliases: ["oranges", "clementine", "mandarin", "橙子", "橘子", "chengzi"],
     tip: "Whole fruit gives citrate with the fiber still attached. It is a better daily choice than a large glass of juice.",
   }),
   food({
@@ -131,7 +131,7 @@ const ingredients: Food[] = [
     name: "Milk",
     group: "dairy",
     tags: ["dietary-calcium", "fluid"],
-    aliases: ["cow milk", "skim milk", "whole milk", "dairy"],
+    aliases: ["cow milk", "skim milk", "whole milk", "dairy", "牛奶", "niunai"],
     tip: "Drink it with meals so the calcium is there when oxalate arrives. It is a food to keep, not a food to fear.",
   }),
   food({
@@ -214,21 +214,21 @@ const ingredients: Food[] = [
     id: "apple",
     name: "Apple",
     group: "fruit",
-    aliases: ["apples", "applesauce unsweetened"],
+    aliases: ["apples", "applesauce unsweetened", "苹果", "蘋果", "pingguo"],
     tip: "A low-oxalate fruit that fits freely. Choose the fruit over a sweetened drink.",
   }),
   food({
     id: "banana",
     name: "Banana",
     group: "fruit",
-    aliases: ["bananas"],
+    aliases: ["bananas", "香蕉", "xiangjiao"],
     tip: "Low oxalate. If your kidneys do not clear potassium well, ask about portion size, as you would for other high-potassium fruit.",
   }),
   food({
     id: "blueberries",
     name: "Blueberries",
     group: "fruit",
-    aliases: ["blueberry"],
+    aliases: ["blueberry", "蓝莓", "藍莓", "lanmei"],
     tip: "A low-oxalate fruit. A bowl is a better sweet ending than candy or chocolate.",
   }),
   food({
@@ -242,7 +242,7 @@ const ingredients: Food[] = [
     id: "grapes",
     name: "Grapes",
     group: "fruit",
-    aliases: ["grape"],
+    aliases: ["grape", "葡萄"],
     tip: "A normal bunch is fine. Raisins are the same fruit with the water removed, so the sugar is concentrated.",
   }),
   food({
@@ -257,7 +257,7 @@ const ingredients: Food[] = [
     name: "Strawberries",
     group: "fruit",
     oxalate: "moderate",
-    aliases: ["strawberry"],
+    aliases: ["strawberry", "草莓", "caomei"],
     tip: "A typical serving is not in the same league as spinach. A very large daily bowl is the portion to notice.",
   }),
   food({
@@ -316,7 +316,7 @@ const ingredients: Food[] = [
     oxalate: "high",
     purine: "moderate",
     tags: ["plant"],
-    aliases: ["baby spinach", "spinach salad", "cooked spinach"],
+    aliases: ["baby spinach", "spinach salad", "cooked spinach", "菠菜", "bocai"],
     image: "/foods/spinach.jpg",
     tip: "Cooked spinach is 755 mg per half cup on the handout, and raw spinach is 656 mg per cup. Boiling and discarding the water lowers oxalate. If you eat it, use a small amount and have milk, yogurt, or cheese at that meal.",
   }),
@@ -360,7 +360,7 @@ const ingredients: Food[] = [
     name: "Broccoli",
     group: "vegetables",
     tags: ["plant"],
-    aliases: ["broccolini"],
+    aliases: ["broccolini", "西兰花", "西蘭花", "xilanhua"],
     tip: "A low-oxalate vegetable you can eat generously.",
   }),
   food({
@@ -375,8 +375,64 @@ const ingredients: Food[] = [
     name: "Cabbage",
     group: "vegetables",
     tags: ["plant"],
-    aliases: ["coleslaw"],
+    aliases: ["coleslaw", "round cabbage", "甘蓝", "甘藍"],
     tip: "Low oxalate. Restaurant coleslaw can be salty or sweet, so homemade is the more predictable version.",
+  }),
+  food({
+    id: "napa-cabbage",
+    name: "Napa cabbage",
+    group: "vegetables",
+    tags: ["plant"],
+    aliases: ["Chinese cabbage", "wombok", "大白菜", "白菜", "napa", "baicai"],
+    tip: "A familiar low-oxalate vegetable for soups, stir-fries, and dumplings. Restaurant broth and sauces can add a lot of sodium.",
+  }),
+  food({
+    id: "bok-choy-vegetable",
+    name: "Bok choy",
+    group: "vegetables",
+    tags: ["plant"],
+    aliases: ["pak choi", "pak choy", "上海青", "小白菜", "青江菜", "youcai"],
+    tip: "A low-oxalate leafy vegetable. Ask for light seasoning or sauce on the side when ordering it out.",
+  }),
+  food({
+    id: "bean-sprouts",
+    name: "Bean sprouts",
+    group: "vegetables",
+    tags: ["plant"],
+    aliases: ["mung bean sprouts", "soybean sprouts", "豆芽", "绿豆芽", "綠豆芽", "黄豆芽", "黃豆芽"],
+    tip: "A common low-oxalate vegetable. In restaurant stir-fries, the sauce and added salt may matter more than the sprouts.",
+  }),
+  food({
+    id: "green-onion",
+    name: "Green onion",
+    group: "vegetables",
+    tags: ["plant"],
+    aliases: ["scallion", "spring onion", "葱", "蔥", "大葱", "大蔥", "葱花", "蔥花"],
+    tip: "A low-oxalate flavoring. Fresh onion is different from salty sauces or seasoning mixes made with it.",
+  }),
+  food({
+    id: "garlic",
+    name: "Garlic",
+    group: "vegetables",
+    tags: ["plant"],
+    aliases: ["大蒜", "蒜", "蒜头", "蒜頭", "suan"],
+    tip: "A low-oxalate way to add flavor. Garlic sauces and prepared pastes may contain added salt.",
+  }),
+  food({
+    id: "ginger",
+    name: "Ginger",
+    group: "vegetables",
+    tags: ["plant"],
+    aliases: ["fresh ginger", "生姜", "生薑", "姜", "薑", "jiang"],
+    tip: "Fresh ginger is a low-oxalate seasoning. Bottled sauces or pickled ginger can contain added sodium.",
+  }),
+  food({
+    id: "eggplant",
+    name: "Eggplant",
+    group: "vegetables",
+    tags: ["plant"],
+    aliases: ["aubergine", "茄子", "qiezi"],
+    tip: "A low-oxalate vegetable. Restaurant eggplant can absorb oil and come with salty sauce, so ask for lighter seasoning.",
   }),
   food({
     id: "lettuce",
@@ -391,7 +447,16 @@ const ingredients: Food[] = [
     name: "Cucumber",
     group: "vegetables",
     tags: ["plant"],
+    aliases: ["黄瓜", "黃瓜", "huanggua"],
     tip: "Low oxalate, and it adds a little water to the meal.",
+  }),
+  food({
+    id: "celery",
+    name: "Celery",
+    group: "vegetables",
+    tags: ["plant"],
+    aliases: ["celery stalk", "芹菜", "qin cai", "qincai"],
+    tip: "The oxalate reference lists raw celery at 3 mg per stalk and cooked celery at 10 mg per cup. These are reference portions, not daily limits. Restaurant soups and stir-fries may have more sodium from broth or sauce.",
   }),
   food({
     id: "zucchini",
@@ -410,6 +475,24 @@ const ingredients: Food[] = [
     tip: "Low oxalate, and a food source of vitamin C. Food vitamin C is different from a high-dose supplement.",
   }),
   food({
+    id: "shishito-peppers",
+    name: "Shishito peppers",
+    group: "vegetables",
+    oxalate: "not-listed",
+    tags: ["plant"],
+    aliases: ["shishito", "shishito pepper", "Japanese shishito", "Shishito Heirloom Japanese Sweet Pepper", "ししとう", "獅子唐", "獅子唐辛子"],
+    tip: "A usual vegetable-side portion is a reasonable starting point. Restaurant blistered peppers may have added salt; the oxalate reference does not list shishito separately.",
+  }),
+  food({
+    id: "japanese-sweet-pepper",
+    name: "Japanese sweet pepper",
+    group: "vegetables",
+    oxalate: "not-listed",
+    tags: ["plant"],
+    aliases: ["heirloom Japanese sweet pepper", "Japanese heirloom sweet pepper", "Japanese sweet peppers"],
+    tip: "A usual vegetable-side portion is a reasonable starting point. The oxalate reference does not list this variety separately, so it has no variety-specific measurement here.",
+  }),
+  food({
     id: "green-beans",
     name: "Green beans",
     group: "vegetables",
@@ -422,8 +505,17 @@ const ingredients: Food[] = [
     name: "Carrots",
     group: "vegetables",
     tags: ["plant"],
-    aliases: ["carrot"],
+    aliases: ["carrot", "胡萝卜", "胡蘿蔔", "huluobo"],
     tip: "Low oxalate. Raw or cooked both fit.",
+  }),
+  food({
+    id: "daikon",
+    name: "White radish (daikon)",
+    group: "vegetables",
+    oxalate: "not-listed",
+    tags: ["plant"],
+    aliases: ["daikon radish", "Japanese radish", "Chinese white radish", "白萝卜", "白蘿蔔", "萝卜", "蘿蔔", "luobo", "bailuobo"],
+    tip: "A usual vegetable portion in soup, stir-fry, or as a side is a reasonable starting point. The reference lists radish at 0 mg per 10 count, but does not specify daikon or a daikon-sized portion, so treat that as a general reference rather than a precise daikon measurement.",
   }),
   food({
     id: "tomatoes",
@@ -431,7 +523,7 @@ const ingredients: Food[] = [
     group: "vegetables",
     oxalate: "moderate",
     tags: ["plant"],
-    aliases: ["tomato", "tomato sauce", "marinara"],
+    aliases: ["tomato", "tomato sauce", "marinara", "西红柿", "西紅柿", "番茄", "fanqie"],
     tip: "One medium tomato is 7 mg on the handout. Tomato sauce is 17 mg per half cup, and it is often salty from the jar.",
   }),
   food({
@@ -440,7 +532,7 @@ const ingredients: Food[] = [
     group: "vegetables",
     oxalate: "moderate",
     tags: ["plant"],
-    aliases: ["potato", "baked potato", "mashed potato"],
+    aliases: ["potato", "baked potato", "mashed potato", "土豆", "马铃薯", "馬鈴薯", "tudou"],
     tip: "A medium baked potato with the skin is 97 mg. Mashed potatoes are 29 mg per cup. Fries are about 51 mg per half cup. Salt and frying are separate problems.",
   }),
   food({
@@ -449,7 +541,7 @@ const ingredients: Food[] = [
     group: "vegetables",
     oxalate: "moderate",
     tags: ["plant"],
-    aliases: ["yam"],
+    aliases: ["yam", "红薯", "紅薯", "甘薯", "地瓜", "hongshu", "digua"],
     tip: "Higher in oxalate than a white potato. A half potato is a more comfortable portion when oxalate is the issue.",
   }),
   food({
@@ -458,7 +550,7 @@ const ingredients: Food[] = [
     group: "vegetables",
     purine: "moderate",
     tags: ["plant"],
-    aliases: ["mushroom"],
+    aliases: ["mushroom", "蘑菇", "香菇", "mogu", "xianggu"],
     tip: "Plant purines have not shown the same risk as anchovies or organ meat. A normal serving can stay.",
   }),
   food({
@@ -473,7 +565,7 @@ const ingredients: Food[] = [
     id: "white-rice",
     name: "White rice",
     group: "grains",
-    aliases: ["rice"],
+    aliases: ["rice", "米饭", "米飯", "大米", "mifan"],
     tip: "Low oxalate. A useful base when you want a grain that does not add to the oxalate load.",
   }),
   food({
@@ -519,8 +611,16 @@ const ingredients: Food[] = [
     id: "corn-tortilla",
     name: "Corn tortilla",
     group: "grains",
-    aliases: ["tortilla", "corn"],
+    aliases: ["tortilla", "corn tortilla", "玉米饼", "玉米餅", "yumi bing"],
     tip: "Low oxalate. Flour tortillas are fine too. The filling and the salt decide the meal more than the tortilla.",
+  }),
+  food({
+    id: "corn",
+    name: "Corn",
+    group: "vegetables",
+    tags: ["plant"],
+    aliases: ["sweet corn", "corn kernels", "corn on the cob", "玉米", "yùmǐ", "yumi"],
+    tip: "A usual serving of corn fits many stone-prevention patterns. The oxalate reference lists 1/2 cup at 1 mg; salty butter or seasoning is a separate consideration.",
   }),
   food({
     id: "pasta",
@@ -534,7 +634,7 @@ const ingredients: Food[] = [
     name: "Eggs",
     group: "protein",
     tags: ["animal"],
-    aliases: ["egg", "omelet"],
+    aliases: ["egg", "omelet", "鸡蛋", "雞蛋", "jidan"],
     tip: "A practical protein with few purines. Cook them with little salt, and add vegetables such as peppers or kale.",
   }),
   food({
@@ -543,7 +643,7 @@ const ingredients: Food[] = [
     group: "protein",
     purine: "moderate",
     tags: ["animal"],
-    aliases: ["poultry", "chicken breast"],
+    aliases: ["poultry", "chicken breast", "鸡肉", "雞肉", "jirou"],
     tip: "About a deck of cards at a meal is the portion stone clinics often teach. Fill the rest of the plate with vegetables and a grain.",
   }),
   food({
@@ -561,7 +661,7 @@ const ingredients: Food[] = [
     group: "protein",
     purine: "moderate",
     tags: ["animal"],
-    aliases: ["steak", "hamburger", "ground beef"],
+    aliases: ["steak", "hamburger", "ground beef", "牛肉", "niurou"],
     tip: "A modest serving can fit. A very large steak, especially often, pushes urine chemistry the wrong way.",
   }),
   food({
@@ -570,8 +670,17 @@ const ingredients: Food[] = [
     group: "protein",
     purine: "moderate",
     tags: ["animal"],
-    aliases: ["pork chop"],
+    aliases: ["pork chop", "猪肉", "豬肉", "zhurou"],
     tip: "A modest chop can fit. Bacon, ham, and sausage add a lot of sodium on top of the meat.",
+  }),
+  food({
+    id: "lamb",
+    name: "Lamb",
+    group: "protein",
+    purine: "moderate",
+    tags: ["animal"],
+    aliases: ["mutton", "lamb chop", "羊肉", "yangrou"],
+    tip: "A modest, palm-sized portion can fit. If you have uric acid stones, keep meat portions moderate and fill more of the plate with vegetables, fruit, dairy, and grains.",
   }),
   food({
     id: "salmon",
@@ -579,7 +688,7 @@ const ingredients: Food[] = [
     group: "protein",
     purine: "moderate",
     tags: ["animal"],
-    aliases: ["fish"],
+    aliases: ["fish", "鱼", "魚", "yu"],
     tip: "A fillet the size of a deck of cards is a different choice from anchovies or sardines, which are much higher in purines.",
   }),
   food({
@@ -588,7 +697,7 @@ const ingredients: Food[] = [
     group: "protein",
     purine: "moderate",
     tags: ["animal"],
-    aliases: ["prawns"],
+    aliases: ["prawns", "虾", "蝦", "xia"],
     tip: "A modest serving is reasonable. Cocktail sauce and restaurant preparations are often salty.",
   }),
   food({
@@ -656,7 +765,7 @@ const ingredients: Food[] = [
     oxalate: "moderate",
     purine: "moderate",
     tags: ["plant", "dietary-calcium"],
-    aliases: ["bean curd", "calcium set tofu"],
+    aliases: ["bean curd", "calcium set tofu", "豆腐", "doufu"],
     tip: "Calcium-set tofu counts as a calcium food. The oxalate is moderate, so it is a portion food rather than a spinach-level food when calcium oxalate is your stone.",
   }),
   food({
@@ -684,7 +793,7 @@ const ingredients: Food[] = [
     name: "Yogurt, plain",
     group: "dairy",
     tags: ["dietary-calcium"],
-    aliases: ["yoghurt", "greek yogurt", "kefir"],
+    aliases: ["yoghurt", "greek yogurt", "kefir", "酸奶", "酸奶", "suannai"],
     tip: "Eat it with a meal or with fruit. Flavored cups can carry as much sugar as a dessert, so plain plus fruit is the better default.",
   }),
   food({
@@ -807,7 +916,7 @@ const ingredients: Food[] = [
     name: "Soy sauce",
     group: "seasoning",
     sodium: "high",
-    aliases: ["tamari", "salt"],
+    aliases: ["tamari", "salt", "酱油", "醬油", "jiangyou"],
     tip: "A tablespoon is a large sodium hit. Use a measured splash, or a lower-sodium version, and add flavor with ginger, garlic, and vinegar.",
   }),
   food({

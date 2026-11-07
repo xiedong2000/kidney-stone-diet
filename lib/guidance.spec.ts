@@ -26,6 +26,19 @@ test("unknown stone type does not ban spinach outright", () => {
   assert.equal(verdict("cola", "unsure"), "limit");
 });
 
+test("unlisted pepper varieties disclose missing oxalate data", () => {
+  assert.equal(verdict("shishito-peppers", "calcium-oxalate"), "careful");
+  assert.equal(verdict("japanese-sweet-pepper", "unsure"), "careful");
+  assert.equal(verdict("daikon", "calcium-oxalate"), "careful");
+  assert.equal(verdict("shishito-peppers", "uric-acid"), "fits");
+  const shishito = foods.find((item) => item.id === "shishito-peppers");
+  assert.ok(shishito);
+  assert.match(guidanceFor(shishito, "calcium-oxalate").reason, /does not list this variety/i);
+  const daikon = foods.find((item) => item.id === "daikon");
+  assert.ok(daikon);
+  assert.match(guidanceFor(daikon, "calcium-oxalate").reason, /does not list this variety/i);
+});
+
 test("uric acid targets purines and sugar, not oxalate", () => {
   assert.equal(verdict("sardines", "uric-acid"), "limit");
   assert.equal(verdict("liver", "uric-acid"), "limit");
@@ -33,6 +46,7 @@ test("uric acid targets purines and sugar, not oxalate", () => {
   assert.equal(verdict("lentils", "uric-acid"), "fits");
   assert.equal(verdict("eggs", "uric-acid"), "fits");
   assert.equal(verdict("chicken", "uric-acid"), "careful");
+  assert.equal(verdict("lamb", "uric-acid"), "careful");
   assert.equal(verdict("lemon-juice", "uric-acid"), "fits");
 });
 

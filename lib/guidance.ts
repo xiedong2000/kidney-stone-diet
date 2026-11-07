@@ -112,6 +112,15 @@ function fallback(focus: StoneFocusId): string {
 }
 
 function oxalateNote(food: Food, focus: StoneFocusId): Guidance | null {
+  if (food.oxalate === "not-listed") {
+    if (focus !== "calcium-oxalate" && focus !== "unsure") return null;
+    return {
+      verdict: "careful",
+      reason:
+        "The reference does not list this variety separately, so there is no variety-specific oxalate amount to compare. A usual vegetable portion is a reasonable starting point; follow your care team's advice if you have a personal oxalate target.",
+    };
+  }
+
   if (food.oxalate === "low") return null;
 
   if (focus === "calcium-oxalate" && food.oxalate === "high") {

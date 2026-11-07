@@ -44,7 +44,7 @@ function termScore(term: string, candidates: string[]): number | null {
       best = Math.max(best ?? 0, 800 - (candidate.length - term.length));
       continue;
     }
-    if (term.length < 3 || Math.abs(candidate.length - term.length) > maxDistance) {
+    if (term.length < 5 || Math.abs(candidate.length - term.length) > maxDistance) {
       continue;
     }
 
@@ -81,7 +81,29 @@ export function foodSearchScore(food: Food, query: string): number | null {
     .flatMap((value) => value.split(" "));
   const nameScores = terms.map((term) => termScore(term, nameCandidates));
   const nameMatch = nameScores.every((value) => value !== null);
+  const exactPhraseMatch = searchable.includes(normalizedQuery);
   const phraseMatch = searchable.some((value) => value.includes(normalizedQuery));
 
-  return score + (nameMatch ? 2000 : 0) + (phraseMatch ? 10000 : 0);
+  return (
+    score +
+    (nameMatch ? 2000 : 0) +
+    (exactPhraseMatch ? 10000 : phraseMatch ? 5000 : 0)
+  );
+}
+
+export function splitFoodSearchTerms(query: string): string[] {
+  return query.split(/[,;，、]+/).map((part) => part.trim()).filter(Boolean);
+}
+
+export function foodSearchScoreForTerms(food: Food, terms: string[]): number | null {
+  const scores = terms
+    .map((term) => foodSearchScore(food, term))
+    .filter((score): score is number => score !== null);
+  return scores.length > 0 ? Math.max(...scores) : null;
+}
+
+export function unmatchedFoodSearchTerms(query: string, candidates: Food[]): string[] {
+  return splitFoodSearchTerms(query).filter(
+    (term) => !candidates.some((food) => foodSearchScore(food, term) !== null),
+  );
 }
