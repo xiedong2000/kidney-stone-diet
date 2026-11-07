@@ -91,7 +91,28 @@ test("CCHRC food names are searchable and qualitative categories stay distinct f
   assert.notEqual(foodSearchScore(findFood("watercress"), "西洋菜"), null);
   assert.notEqual(foodSearchScore(findFood("cilantro"), "莞茜"), null);
   assert.notEqual(foodSearchScore(findFood("asparagus"), "蘆筍"), null);
+  assert.equal(findFood("asparagus").oxalate, "low");
+  assert.equal(findFood("asparagus").oxalateMg, 6);
+  assert.equal(findFood("asparagus").oxalateServing, "4 spears");
+  assert.equal(findFood("green-peas").oxalateMg, 1);
+  assert.equal(findFood("green-peas").oxalateServing, "1/2 cup");
+  assert.notEqual(foodSearchScore(findFood("cabbage"), "椰菜"), null);
+  assert.notEqual(foodSearchScore(findFood("cabbage"), "卷心菜"), null);
+  assert.equal(findFood("cabbage").oxalateMg, 1);
+  assert.equal(findFood("cabbage").oxalateServing, "1/2 cup");
+  assert.match(chineseFoodTip(findFood("cabbage")), /每半杯含 1 毫克/);
+  assert.equal(findFood("bok-choy-vegetable").oxalateMg, 1);
+  assert.equal(findFood("bok-choy-vegetable").oxalateServing, "1 cup, raw");
+  assert.equal(findFood("grapes").oxalateMg, 1);
+  assert.equal(findFood("cherries").oxalateMg, 3);
+  assert.equal(findFood("pineapple").oxalateMg, 4);
+  assert.equal(findFood("dried-figs").oxalateMg, 24);
+  assert.equal(findFood("green-onion").oxalateMg, 1);
+  assert.equal(findFood("eggs").oxalateMg, 0);
+  assert.equal(findFood("soy-sauce").oxalateMg, 3);
   assert.match(chineseFoodTip(findFood("corn")), /中量草酸/);
+  assert.match(chineseFoodTip(findFood("green-peas")), /半杯豌豆含 1 毫克/);
+  assert.match(chineseFoodTip(findFood("asparagus")), /每 4 根含 6 毫克/);
   assert.match(chineseFoodTip(findFood("draft-beer")), /定性分类/);
 });
 

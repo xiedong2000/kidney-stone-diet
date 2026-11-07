@@ -385,10 +385,9 @@ const ingredients: Food[] = [
     id: "asparagus",
     name: "Asparagus",
     group: "vegetables",
-    oxalate: "not-listed",
     tags: ["plant"],
     aliases: ["蘆筍", "芦笋", "asparagus spears"],
-    tip: "The CCHRC's 2015–2020 general-food chart places asparagus in its medium-oxalate group, but gives no amount or serving size. This qualitative category is not a measured value; the site's serving-based reference does not list asparagus.",
+    tip: "The serving-based reference lists 6 mg per 4 spears. The CCHRC's 2015–2020 general-food chart labels asparagus medium, but gives no portion or amount; that qualitative category is not directly comparable.",
   }),
   food({
     id: "green-peas",
@@ -404,8 +403,8 @@ const ingredients: Food[] = [
     name: "Cabbage",
     group: "vegetables",
     tags: ["plant"],
-    aliases: ["coleslaw", "round cabbage", "甘蓝", "甘藍"],
-    tip: "Low oxalate. Restaurant coleslaw can be salty or sweet, so homemade is the more predictable version.",
+    aliases: ["coleslaw", "round cabbage", "卷心菜", "椰菜", "甘蓝", "甘藍"],
+    tip: "The serving-based reference lists cabbage at 1 mg per 1/2 cup. Restaurant coleslaw can be salty or sweet, so homemade is the more predictable version.",
   }),
   food({
     id: "napa-cabbage",
