@@ -21,9 +21,10 @@ export default function CheckPage() {
         </p>
         <p>
           Use the cuisine row for Chinese, American, Mexican, Japanese, Indian,
-          and Italian dishes, including home cooking and the salty restaurant
-          version of the same idea. Oxalate, sodium, and purine are shown as
-          low, moderate, or high.
+          and Italian dishes. When a food was measured in the 2020 oxalate
+          handout, the card shows milligrams per serving. The full list is on
+          the Oxalate page. Oxalate, sodium, and purine are also shown as low,
+          moderate, or high.
           Those are teaching categories. Variety, soil, cooking, and the brand
           change the milligrams. The checker runs in your browser. The search
           is not stored.

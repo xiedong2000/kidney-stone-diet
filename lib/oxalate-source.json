@@ -1,0 +1,3537 @@
+[
+  {
+    "group": "Whole Fruits",
+    "name": "Avocados",
+    "serving": "1 fruit",
+    "category": "Very High",
+    "mg": 19
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Dates",
+    "serving": "1 date",
+    "category": "Very High",
+    "mg": 24
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Grapefruit",
+    "serving": "1/2 fruit",
+    "category": "Very High",
+    "mg": 12
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Kiwi",
+    "serving": "1 fruit",
+    "category": "Very High",
+    "mg": 16
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Orange",
+    "serving": "1 fruit",
+    "category": "Very High",
+    "mg": 29
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Raspberries",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 48
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Tangerine",
+    "serving": "1 fruit",
+    "category": "High",
+    "mg": 10
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Figs",
+    "serving": "1 medium fig",
+    "category": "Moderate",
+    "mg": 9
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Apple Sauce",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Banana",
+    "serving": "1 fruit",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Blackberries",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Blueberries",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Cherries",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Limes",
+    "serving": "1/2 fruit",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Pears",
+    "serving": "1 fruit",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Pineapple",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Raisins",
+    "serving": "1 oz or 1 small snack box",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Strawberries",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Apples",
+    "serving": "1 fruit",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Apricots",
+    "serving": "1 fruit",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Cantaloupe",
+    "serving": "1/4 melon",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Grapes",
+    "serving": "1/2 cup or 16 seedless grapes",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Honeydew Melon",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Lemons",
+    "serving": "1 wedge",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Mango",
+    "serving": "1 fruit",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Nectarine",
+    "serving": "1 fruit",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Papaya",
+    "serving": "1 medium fruit",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Peaches",
+    "serving": "1 fruit",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Plantain",
+    "serving": "1 medium",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Plums",
+    "serving": "1 fruit",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Whole Fruits",
+    "name": "Watermelon",
+    "serving": "1 slice",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Canned Fruits",
+    "name": "Canned Pineapple",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 24
+  },
+  {
+    "group": "Canned Fruits",
+    "name": "Canned Cherries",
+    "serving": "1/2 cup",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Canned Fruits",
+    "name": "Cranberry Sauce",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Canned Fruits",
+    "name": "Canned Pears",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Canned Fruits",
+    "name": "Canned Peaches",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Canned Fruits",
+    "name": "Fruit Cocktail",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Dried Fruits",
+    "name": "Dried Figs",
+    "serving": "5 pieces/fruits",
+    "category": "Very High",
+    "mg": 24
+  },
+  {
+    "group": "Dried Fruits",
+    "name": "Dried Pineapples",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 30
+  },
+  {
+    "group": "Dried Fruits",
+    "name": "Dried Prunes",
+    "serving": "1/4 cup or 5 prunes",
+    "category": "High",
+    "mg": 11
+  },
+  {
+    "group": "Dried Fruits",
+    "name": "Dried Apples",
+    "serving": "1 cup or 13 rings",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Dried Fruits",
+    "name": "Dried Apricots",
+    "serving": "1 cup of halves",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Dried Fruits",
+    "name": "Dried Cranberries",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Bamboo Shoots",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 35
+  },
+  {
+    "group": "Vegetables",
+    "name": "Beets",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 76
+  },
+  {
+    "group": "Vegetables",
+    "name": "Fava Beans",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 20
+  },
+  {
+    "group": "Vegetables",
+    "name": "Navy Beans",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 76
+  },
+  {
+    "group": "Vegetables",
+    "name": "Okra",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 57
+  },
+  {
+    "group": "Vegetables",
+    "name": "Olives",
+    "serving": "approx 10 olives",
+    "category": "Very High",
+    "mg": 18
+  },
+  {
+    "group": "Vegetables",
+    "name": "Parsnip",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 15
+  },
+  {
+    "group": "Vegetables",
+    "name": "Red Kidney Beans",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 15
+  },
+  {
+    "group": "Vegetables",
+    "name": "Refried Beans",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 16
+  },
+  {
+    "group": "Vegetables",
+    "name": "Rhubarb",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 541
+  },
+  {
+    "group": "Vegetables",
+    "name": "Rutabaga",
+    "serving": "1/2 cup mashed",
+    "category": "Very High",
+    "mg": 31
+  },
+  {
+    "group": "Vegetables",
+    "name": "Spinach, cooked",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 755
+  },
+  {
+    "group": "Vegetables",
+    "name": "Spinach, raw",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 656
+  },
+  {
+    "group": "Vegetables",
+    "name": "Tomato Sauce",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 17
+  },
+  {
+    "group": "Vegetables",
+    "name": "Turnip",
+    "serving": "1/2 cup mashed",
+    "category": "Very High",
+    "mg": 30
+  },
+  {
+    "group": "Vegetables",
+    "name": "Yams",
+    "serving": "1/2 cup, cubed",
+    "category": "Very High",
+    "mg": 40
+  },
+  {
+    "group": "Vegetables",
+    "name": "Carrots, raw",
+    "serving": "1/2 lg carrot",
+    "category": "High",
+    "mg": 10
+  },
+  {
+    "group": "Vegetables",
+    "name": "Celery, Cooked",
+    "serving": "1 cup",
+    "category": "High",
+    "mg": 10
+  },
+  {
+    "group": "Vegetables",
+    "name": "Collards",
+    "serving": "1 cup",
+    "category": "High",
+    "mg": 10
+  },
+  {
+    "group": "Vegetables",
+    "name": "Artichokes",
+    "serving": "1 small bud",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Vegetables",
+    "name": "Asparagus",
+    "serving": "4 spears",
+    "category": "Moderate",
+    "mg": 6
+  },
+  {
+    "group": "Vegetables",
+    "name": "Carrots, cooked",
+    "serving": "1/2 cup sliced",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Vegetables",
+    "name": "Hot Chili Peppers",
+    "serving": "1/2 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Vegetables",
+    "name": "Mixed Vegetables, frozen",
+    "serving": "1/2 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Vegetables",
+    "name": "Oriental Vegetables, frozen",
+    "serving": "1/2 cup",
+    "category": "Moderate",
+    "mg": 6
+  },
+  {
+    "group": "Vegetables",
+    "name": "Soybeans",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Vegetables",
+    "name": "String Beans",
+    "serving": "1/2 cup",
+    "category": "Moderate",
+    "mg": 9
+  },
+  {
+    "group": "Vegetables",
+    "name": "Tomato",
+    "serving": "1 med whole",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Vegetables",
+    "name": "Brussel Sprouts",
+    "serving": "1/2 cup frozen",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Vegetables",
+    "name": "Celery, raw",
+    "serving": "1 stalk",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Vegetables",
+    "name": "Kale",
+    "serving": "1 cup chopped",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Vegetables",
+    "name": "Mung Beans",
+    "serving": "1/2 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Vegetables",
+    "name": "Mustard Greens",
+    "serving": "1 cup chopped",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Vegetables",
+    "name": "Sea Vegetables",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Vegetables",
+    "name": "Alfalfa Sprouts",
+    "serving": "1/2 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Vegetables",
+    "name": "Bok Choy (Chinese Cabbage)",
+    "serving": "1 cup, raw",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Broccoli",
+    "serving": "1/2 cup chopped",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Cabbage",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Cauliflower",
+    "serving": "1/2 cup cooked",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Chives",
+    "serving": "1 tsp",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Vegetables",
+    "name": "Corn",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Cucumber",
+    "serving": "1/4 cucumber",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Endive",
+    "serving": "1/2 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Vegetables",
+    "name": "Green Pepper",
+    "serving": "1 ring",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Iceberg Lettuce",
+    "serving": "1 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Vegetables",
+    "name": "Mushrooms",
+    "serving": "1 mushroom",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Vegetables",
+    "name": "Onions",
+    "serving": "1 small onion",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Vegetables",
+    "name": "Peas",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Pickles",
+    "serving": "1 pickle",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Vegetables",
+    "name": "Radish",
+    "serving": "10 count",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Vegetables",
+    "name": "Romaine Lettuce",
+    "serving": "1 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Vegetables",
+    "name": "Scallions",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Sauerkraut",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Waterchestnuts",
+    "serving": "4 waterchestnuts",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Vegetables",
+    "name": "Yellow Squash",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Vegetables",
+    "name": "Zucchini",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Potatoes",
+    "name": "French Fries (homemade or fast food)",
+    "serving": "4 oz or 1/2 cup",
+    "category": "Very High",
+    "mg": 51
+  },
+  {
+    "group": "Potatoes",
+    "name": "Baked Potato with Skin",
+    "serving": "1 medium",
+    "category": "Very High",
+    "mg": 97
+  },
+  {
+    "group": "Potatoes",
+    "name": "Mashed Potatoes",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 29
+  },
+  {
+    "group": "Potatoes",
+    "name": "Potato Chips",
+    "serving": "1 oz",
+    "category": "Very High",
+    "mg": 21
+  },
+  {
+    "group": "Potatoes",
+    "name": "Potato Salad",
+    "serving": "1/3 cup",
+    "category": "Very High",
+    "mg": 17
+  },
+  {
+    "group": "Potatoes",
+    "name": "Sweet Potatoes",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 28
+  },
+  {
+    "group": "Cream Products",
+    "name": "Homemade Cream Sauce",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Cream Products",
+    "name": "Coffee Creamer",
+    "serving": "1 Tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Cream Products",
+    "name": "Non-Dairy Creamer",
+    "serving": "1 Tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Cream Products",
+    "name": "Sour Cream",
+    "serving": "1 Tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ice Creams",
+    "name": "Ice Cream (Vanilla)",
+    "serving": "1/2 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ice Creams",
+    "name": "Ice Cream Light",
+    "serving": "1/2 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ice Creams",
+    "name": "Non Fat Ice Cream",
+    "serving": "1/2 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Yogurt Products",
+    "name": "Plain Yogurt",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Yogurt Products",
+    "name": "Yogurt with Fruit",
+    "serving": "8 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Yogurt Products",
+    "name": "Non Fat Yogurt with Fruit",
+    "serving": "8 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Yogurt Products",
+    "name": "Frozen Yogurt",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Yogurt Products",
+    "name": "Lowfat Frozen Yogurt",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Cheese Products",
+    "name": "American Cheese",
+    "serving": "1 slice",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Cheese Products",
+    "name": "Cheddar Cheese",
+    "serving": "1 slice",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Cheese Products",
+    "name": "Low Fat Cheese",
+    "serving": "1 slice",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Cheese Products",
+    "name": "Cottage Cheese",
+    "serving": "1/2 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Cheese Products",
+    "name": "Low Fat Cottage Cheese",
+    "serving": "1 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Cheese Products",
+    "name": "Cottage Cheese Fat Free",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Cheese Products",
+    "name": "Mozzarella Cheese",
+    "serving": "1 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Cheese Products",
+    "name": "Egg Beaters",
+    "serving": "4 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Dairy Spreads",
+    "name": "Cream Cheese",
+    "serving": "1 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Dairy Spreads",
+    "name": "Cream Cheese Fat Free",
+    "serving": "1 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Dairy Spreads",
+    "name": "Low Fat Cream Cheese",
+    "serving": "1 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Dairy Spreads",
+    "name": "Butter, Salted",
+    "serving": "1 pat",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Milk",
+    "name": "Chocolate Milk",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Milk",
+    "name": "Powdered Milk",
+    "serving": "1 envelope",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Milk",
+    "name": "Fat Free Milk",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Milk",
+    "name": "Milk",
+    "serving": "1% Milk 1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Milk",
+    "name": "Milk",
+    "serving": "2% Milk 1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Milk",
+    "name": "Whole Milk",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Milk",
+    "name": "Buttermilk",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Breads",
+    "name": "French Toast",
+    "serving": "2 slices",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Breads",
+    "name": "English Muffin Whole Wheat",
+    "serving": "1 muffin",
+    "category": "High",
+    "mg": 12
+  },
+  {
+    "group": "Breads",
+    "name": "Pancakes (Homemade)",
+    "serving": "4 cakes",
+    "category": "High",
+    "mg": 11
+  },
+  {
+    "group": "Breads",
+    "name": "Pancakes (mix)",
+    "serving": "4 cakes",
+    "category": "High",
+    "mg": 10
+  },
+  {
+    "group": "Breads",
+    "name": "Blueberry Muffins",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 9
+  },
+  {
+    "group": "Breads",
+    "name": "Biscuits (plain or buttermilk)",
+    "serving": "1 biscuit",
+    "category": "Moderate",
+    "mg": 6
+  },
+  {
+    "group": "Breads",
+    "name": "Bran Muffins",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Breads",
+    "name": "Bran Muffin Low fat",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Breads",
+    "name": "Cracked Wheat Bread",
+    "serving": "1 slice",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Breads",
+    "name": "English Muffin",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "Breads",
+    "name": "English Muffin Multi-Grain",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "Breads",
+    "name": "English Muffin Wheat",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Breads",
+    "name": "Low Fat Muffins",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Breads",
+    "name": "Rye Bread",
+    "serving": "1 slice",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Breads",
+    "name": "Tortillas, Corn",
+    "serving": "1 tortilla",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Breads",
+    "name": "Tortillas, flour",
+    "serving": "1 tortilla",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "Breads",
+    "name": "White Bread",
+    "serving": "1 slice",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Breads",
+    "name": "Wheat Bran Bread",
+    "serving": "1 slice",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Breads",
+    "name": "Whole Oat Bread",
+    "serving": "1 slice",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Breads",
+    "name": "Whole Wheat Bread",
+    "serving": "1 slice",
+    "category": "Moderate",
+    "mg": 6
+  },
+  {
+    "group": "Breads",
+    "name": "Corn Bread",
+    "serving": "1 piece",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Breads",
+    "name": "Oatmeal Bread",
+    "serving": "1 piece",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Breads",
+    "name": "Oat Bran Muffin",
+    "serving": "1 small muffin",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Breads",
+    "name": "Oat Bran Bread",
+    "serving": "1 slice",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "All-Purpose Flour",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 17
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Brown Rice, cooked",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 24
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Brown Rice Flour",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 65
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Buckwheat Groats",
+    "serving": "1 cup cooked",
+    "category": "Very High",
+    "mg": 133
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Bulgur, cooked",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 86
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Corn Grits",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 97
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Cornmeal",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 64
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Couscous",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 15
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Lasagna",
+    "serving": "1 serving",
+    "category": "Very High",
+    "mg": 23
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Millet, cooked",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 62
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Miso",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 40
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Rice Bran",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 281
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Soy Flour",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 94
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Wheat Berries",
+    "serving": "1 cup cooked",
+    "category": "Very High",
+    "mg": 98
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Wheat Flour, Whole Grain",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 29
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Spaghetti",
+    "serving": "1 cup cooked",
+    "category": "High",
+    "mg": 11
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "White Rice Flour",
+    "serving": "1 cup",
+    "category": "High",
+    "mg": 11
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Corn Flour",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Hummus",
+    "serving": "1 Tbs",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Macaroni & Cheese",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "White Rice, cooked",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Barley Malt Flour",
+    "serving": "1 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Corn Bran",
+    "serving": "1 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Flaxseed",
+    "serving": "1 Tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Pastas, Rice & Grains",
+    "name": "Oat Bran, raw",
+    "serving": "1/3 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Tofu",
+    "serving": "3.5oz",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Veggie Burger",
+    "serving": "1 pattie",
+    "category": "Very High",
+    "mg": 24
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Soy Burger",
+    "serving": "3.5oz",
+    "category": "High",
+    "mg": 12
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Chicken Nuggets",
+    "serving": "6 nuggets",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Meatballs",
+    "serving": "2 meatballs",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Turkey Dogs",
+    "serving": "1 dog",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Antelope",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Bacon",
+    "serving": "2 slices",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Bologna",
+    "serving": "1 slice",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Buffalo",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Chicken Dog",
+    "serving": "1 dog",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Chicken Liver",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Chicken",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Hot Dogs",
+    "serving": "1 dog",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Ham",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Ground Beef",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Lean Hamburg (85%)",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Lean Hamburg (75%)",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Lean Hamburg (90%)",
+    "serving": "3 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Liver",
+    "serving": "3.5oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Moose",
+    "serving": "3oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Pork",
+    "serving": "5 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Turkey",
+    "serving": "5 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Venison",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Meat & Meat Alternatives",
+    "name": "Wild Game Meat",
+    "serving": "3 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Fish",
+    "name": "Tuna Salad",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 6
+  },
+  {
+    "group": "Fish",
+    "name": "Frozen Fish Sticks",
+    "serving": "2 sticks",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Fish",
+    "name": "Alaskan King Crab",
+    "serving": "3 oz or 1/2 leg",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Bluefish",
+    "serving": "1 fillet",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Fish",
+    "name": "Clams, raw",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Cod, pacific",
+    "serving": "3 oz or 1 fillet",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Cod Liver Fish Oil",
+    "serving": "1 tsp",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Flounder",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Haddock",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Halibut",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Herring (Atlantic & Pacific)",
+    "serving": "3 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Fish",
+    "name": "Mackeral",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Oysters",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Pollock",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Salmon (all types)",
+    "serving": "4 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Sardines",
+    "serving": "1 can or 3.75oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Shrimp",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Swordfish",
+    "serving": "1 piece",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Tuna Fish (in oil)",
+    "serving": "3.5 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Tuna Fish (in water)",
+    "serving": "3.5oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fish",
+    "name": "Whiting",
+    "serving": "3 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Nuts and Seeds",
+    "name": "Almonds",
+    "serving": "1 oz or 22 kernels",
+    "category": "Very High",
+    "mg": 122
+  },
+  {
+    "group": "Nuts and Seeds",
+    "name": "Candies with Nuts (ex Snickers)",
+    "serving": "2 oz",
+    "category": "Very High",
+    "mg": 38
+  },
+  {
+    "group": "Nuts and Seeds",
+    "name": "Cashews",
+    "serving": "1 oz or 18 kernels",
+    "category": "Very High",
+    "mg": 49
+  },
+  {
+    "group": "Nuts and Seeds",
+    "name": "Peanuts",
+    "serving": "1 oz",
+    "category": "Very High",
+    "mg": 27
+  },
+  {
+    "group": "Nuts and Seeds",
+    "name": "Pistachios",
+    "serving": "1 oz or 48 kernels",
+    "category": "Very High",
+    "mg": 14
+  },
+  {
+    "group": "Nuts and Seeds",
+    "name": "Mixed Nuts (with Peanuts)",
+    "serving": "1 oz",
+    "category": "Very High",
+    "mg": 39
+  },
+  {
+    "group": "Nuts and Seeds",
+    "name": "Pumpkin Seeds",
+    "serving": "1 cup, cooked",
+    "category": "Very High",
+    "mg": 17
+  },
+  {
+    "group": "Nuts and Seeds",
+    "name": "Trail Mix",
+    "serving": "1 oz",
+    "category": "Very High",
+    "mg": 15
+  },
+  {
+    "group": "Nuts and Seeds",
+    "name": "Walnuts",
+    "serving": "1 cup or 7 nuts",
+    "category": "Very High",
+    "mg": 31
+  },
+  {
+    "group": "Nuts and Seeds",
+    "name": "Pecans",
+    "serving": "1 oz or 15 halves",
+    "category": "High",
+    "mg": 10
+  },
+  {
+    "group": "Nuts and Seeds",
+    "name": "Sunflower Seeds",
+    "serving": "1 cup",
+    "category": "High",
+    "mg": 12
+  },
+  {
+    "group": "Snacks",
+    "name": "Brownies",
+    "serving": "1 oz or 1/2 brownie",
+    "category": "Very High",
+    "mg": 31
+  },
+  {
+    "group": "Snacks",
+    "name": "Cake (store brand)",
+    "serving": "1 piece",
+    "category": "Very High",
+    "mg": 15
+  },
+  {
+    "group": "Snacks",
+    "name": "Cake (homemade)",
+    "serving": "1 piece",
+    "category": "Very High",
+    "mg": 16
+  },
+  {
+    "group": "Snacks",
+    "name": "Chocolate Syrup",
+    "serving": "2 Tbs",
+    "category": "Very High",
+    "mg": 38
+  },
+  {
+    "group": "Snacks",
+    "name": "Fudge Sauce",
+    "serving": "2 Tbs",
+    "category": "Very High",
+    "mg": 28
+  },
+  {
+    "group": "Snacks",
+    "name": "Cake (Low Fat Only)",
+    "serving": "1 piece",
+    "category": "High",
+    "mg": 11
+  },
+  {
+    "group": "Snacks",
+    "name": "Chocolate Chip Cookies (store brand)",
+    "serving": "1 cookie",
+    "category": "High",
+    "mg": 10
+  },
+  {
+    "group": "Snacks",
+    "name": "Chocolate Chip Cookies (Low Fat Only)",
+    "serving": "1 cookie",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Milk",
+    "name": "Chocolate Candies",
+    "serving": "1 oz",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Milk",
+    "name": "Pies (homemade)",
+    "serving": "1 piece or 1/8th of pie",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Milk",
+    "name": "Apple Pie",
+    "serving": "1 piece or 1/8th of pie",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Milk",
+    "name": "Pudding Popsicle",
+    "serving": "1 pop",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Milk",
+    "name": "Fig Bars",
+    "serving": "1 cookie",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Milk",
+    "name": "Chocolate Pudding, Instant",
+    "serving": "1/4 box or 1 oz",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Milk",
+    "name": "Oatmeal Cookies (store)",
+    "serving": "1 cookie",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Milk",
+    "name": "Oatmeal Cookie (homemade)",
+    "serving": "1 cookie",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Milk",
+    "name": "Rice Cake",
+    "serving": "1 cake",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Milk",
+    "name": "Rice Pudding",
+    "serving": "1/2 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Milk",
+    "name": "Snack Cakes- crème filled",
+    "serving": "1 cake",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Milk",
+    "name": "Custard",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Milk",
+    "name": "Jello",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Milk",
+    "name": "Popsicle",
+    "serving": "1 stick",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Milk",
+    "name": "Rice Krispy Treat",
+    "serving": "1 bar",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Milk",
+    "name": "Sherbert",
+    "serving": "1/2 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Milk",
+    "name": "Tapioca Pudding",
+    "serving": "1/2 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Milk",
+    "name": "Vanilla Pudding",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Crackers, Chips & Miscellaneous",
+    "name": "Tortilla Corn Chips",
+    "serving": "1 oz",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Crackers, Chips & Miscellaneous",
+    "name": "Popcorn, oil-popped",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Crackers, Chips & Miscellaneous",
+    "name": "Pretzels, Hard & Salted",
+    "serving": "1 oz",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Crackers, Chips & Miscellaneous",
+    "name": "Fruit Roll-Ups",
+    "serving": "1 roll",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Crackers, Chips & Miscellaneous",
+    "name": "Graham Crackers",
+    "serving": "1 large rectangle",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Crackers, Chips & Miscellaneous",
+    "name": "Popcorn, air-popped",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Crackers, Chips & Miscellaneous",
+    "name": "Ritz Crackers",
+    "serving": "5 crackers",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Crackers, Chips & Miscellaneous",
+    "name": "Saltines",
+    "serving": "1 cracker",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Crackers, Chips & Miscellaneous",
+    "name": "Triscuits",
+    "serving": "1 cracker",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Crackers, Chips & Miscellaneous",
+    "name": "Wheat Crackers",
+    "serving": "1 cracker",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Crackers, Chips & Miscellaneous",
+    "name": "Wheat Thins, Reduced Fat",
+    "serving": "1 cracker",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Beverages",
+    "name": "Carrot Juice",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 27
+  },
+  {
+    "group": "Beverages",
+    "name": "Hot Chocolate (homemade)",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 65
+  },
+  {
+    "group": "Beverages",
+    "name": "Lemonade (frozen from concentrate)",
+    "serving": "8 oz",
+    "category": "Very High",
+    "mg": 15
+  },
+  {
+    "group": "Beverages",
+    "name": "Rice Dream",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Beverages",
+    "name": "Tea, Brewed",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 14
+  },
+  {
+    "group": "Beverages",
+    "name": "Tomato Juice",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 14
+  },
+  {
+    "group": "Beverages",
+    "name": "V8 Juice",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 18
+  },
+  {
+    "group": "Beverages",
+    "name": "Prune Juice",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Beverages",
+    "name": "Apple Juice",
+    "serving": "6 oz",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Beverages",
+    "name": "Apricot Juice",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Beverages",
+    "name": "Coffee Decaff",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Beverages",
+    "name": "Orange Juice",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Beverages",
+    "name": "Pineapple Juice",
+    "serving": "8 oz",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Beverages",
+    "name": "Postum (coffee Substitute)",
+    "serving": "1 serving",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Beverages",
+    "name": "Coffee",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Beverages",
+    "name": "Gatorade",
+    "serving": "1 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Beverages",
+    "name": "Grape Juice",
+    "serving": "8 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Beverages",
+    "name": "Grapefruit Juice",
+    "serving": "8 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Beverages",
+    "name": "Kool-Aid",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Beverages",
+    "name": "Lemonade (diet)",
+    "serving": "8 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Beverages",
+    "name": "Mango Juice",
+    "serving": "8 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Beverages",
+    "name": "Sodas (all types)",
+    "serving": "8 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Beverages",
+    "name": "Sweetened Instant Iced Tea",
+    "serving": "1 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Beverages",
+    "name": "Water",
+    "serving": "8 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Dairy Beverages",
+    "name": "Soy Milk",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Dairy Beverages",
+    "name": "Dairy Beverages",
+    "serving": "1% Milk 1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Dairy Beverages",
+    "name": "Dairy Beverages",
+    "serving": "2% Milk 1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Alcoholic Beverages",
+    "name": "Beer (Regular)",
+    "serving": "1 can",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Alcoholic Beverages",
+    "name": "Beer (Light)",
+    "serving": "1 can",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Alcoholic Beverages",
+    "name": "Red Wine",
+    "serving": "4 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Alcoholic Beverages",
+    "name": "White Wine",
+    "serving": "4 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Alcoholic Beverages",
+    "name": "Liquor (80 proof)",
+    "serving": "1 jigger",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Peanut Butter",
+    "serving": "1 Tbs",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Peanut Butter Reduced Fat",
+    "serving": "1 Tbs",
+    "category": "Very High",
+    "mg": 16
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Stuffing",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 36
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Tahini",
+    "serving": "1 Tbs",
+    "category": "Very High",
+    "mg": 16
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Cream Sauce, Homemade",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Gravy",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Olive Oil & Vinegar",
+    "serving": "amount not given",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Soy Sauce",
+    "serving": "1 Tbs",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Apple Butter",
+    "serving": "1 Tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Butter",
+    "serving": "1 Pat",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Catsup/Ketchup",
+    "serving": "1 packet",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Cream Cheese Low Fat",
+    "serving": "1 oz",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Horseradish",
+    "serving": "1 Tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Jam/Jelly",
+    "serving": "1 Tbs",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Italian Salad Dressing",
+    "serving": "1 Tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Mayonnaise",
+    "serving": "1 Tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Mustard, yellow",
+    "serving": "1 tsp or packet",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Pancake Syrup",
+    "serving": "3/4 Tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Salsa",
+    "serving": "1 Tbs",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Whipped Cream",
+    "serving": "2 Tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Spreads, Sauces & Toppings",
+    "name": "Whipped Topping",
+    "serving": "2 Tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Cocoa Powder",
+    "serving": "4 tsp",
+    "category": "Very High",
+    "mg": 67
+  },
+  {
+    "group": "Ingredients",
+    "name": "Soy Protein Isolate",
+    "serving": "1 oz",
+    "category": "Very High",
+    "mg": 27
+  },
+  {
+    "group": "Ingredients",
+    "name": "Chili Powder",
+    "serving": "1 tbs",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Ingredients",
+    "name": "Brewer's Yeast",
+    "serving": "1 tbs",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Ingredients",
+    "name": "Cornstarch",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Ingredients",
+    "name": "Lemon Juice (canned or bottled)",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Ingredients",
+    "name": "Artificial Sweetener",
+    "serving": "1 packet",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Ingredients",
+    "name": "Bullion Cube",
+    "serving": "1 cube",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Ingredients",
+    "name": "Black Pepper",
+    "serving": "1 dash",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Brown Sugar",
+    "serving": "1 cup packed",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Ingredients",
+    "name": "Butter",
+    "serving": "1 pat",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Corn Syrup (high Fructose)",
+    "serving": "1 tbs",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Ingredients",
+    "name": "Corn Syrup (Light)",
+    "serving": "1 tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Cod Liver Oil",
+    "serving": "1 tsp",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Cream Substitute",
+    "serving": "1 tsp",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Cream",
+    "serving": "1 tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Eggs",
+    "serving": "1 medium egg",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Eggbeaters",
+    "serving": "4 oz",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Garlic Powder",
+    "serving": "1 tsp",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Gelatin",
+    "serving": "1 tbs or 1 envelope",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Honey",
+    "serving": "1 tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Lard",
+    "serving": "1 tsp",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Lemon Juice Raw (concentrate)",
+    "serving": "1 tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Molasses",
+    "serving": "1 tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Oat Flour",
+    "serving": "1 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Salt",
+    "serving": "1 tsp",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Shortening",
+    "serving": "1 tsp",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Sugar",
+    "serving": "1 tsp",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Ingredients",
+    "name": "Sweet Whey Fluid",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Ingredients",
+    "name": "Sweet Whey Dried",
+    "serving": "1 tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Burritos with beans",
+    "serving": "1 burrito",
+    "category": "Very High",
+    "mg": 17
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Burritos with beans & meat",
+    "serving": "1 burrito",
+    "category": "Very High",
+    "mg": 16
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Cheeseburger with bun",
+    "serving": "1 burger & bun",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Chili with Beans",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 24
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Enchilada with Cheese & beef",
+    "serving": "1 enchilada",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Enchilada with Chicken",
+    "serving": "1 enchilada",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "French Fries",
+    "serving": "4 oz",
+    "category": "Very High",
+    "mg": 51
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Lasagna with meat",
+    "serving": "1 serving",
+    "category": "Very High",
+    "mg": 23
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Nachos with Cheese",
+    "serving": "6-8 chips",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Pizza with Cheese",
+    "serving": "2 slices",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Grilled Cheese Sandwich",
+    "serving": "1 sandwich",
+    "category": "High",
+    "mg": 12
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Tacos",
+    "serving": "1 small taco",
+    "category": "High",
+    "mg": 12
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Doughnut",
+    "serving": "1 doughnut",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Eggroll",
+    "serving": "1 eggroll",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Hot Dog with Bun",
+    "serving": "1 dog with bun",
+    "category": "Moderate",
+    "mg": 9
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Onion Rings",
+    "serving": "6-8 rings",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Fast Food Items or Meals",
+    "name": "Chicken Roll",
+    "serving": "1 package",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Soups",
+    "name": "Clam Chowder",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Soups",
+    "name": "Lentil Soup",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 39
+  },
+  {
+    "group": "Soups",
+    "name": "Miso Soup",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 111
+  },
+  {
+    "group": "Soups",
+    "name": "Vegetable Beef Soup",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Soups",
+    "name": "Chicken Noodle Soup",
+    "serving": "1 can",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Cream of Wheat",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 18
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Red River Cereal",
+    "serving": "1/4 cup",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Farina Cereal",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 16
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Pancakes (Homemade)",
+    "serving": "4 pancakes",
+    "category": "Very High",
+    "mg": 22
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Pancakes (dry mix)",
+    "serving": "4 pancakes",
+    "category": "Very High",
+    "mg": 37
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Danish Pastry Homemade",
+    "serving": "1 pastry",
+    "category": "Very High",
+    "mg": 14
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Sweet Rolls Low Fat",
+    "serving": "1 pastry",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "English Muffins Whole Wheat ONLY",
+    "serving": "1 muffin",
+    "category": "High",
+    "mg": 12
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Bran Muffins (store)",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Bran Muffin Low Fat",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "English Muffins - Reg",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "English Muffins - Multi-Grain",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "English Muffins - Wheat",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Muffins Low Fat",
+    "serving": "1 muffin",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Poptart",
+    "serving": "1 tart",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Cornbread",
+    "serving": "1 piece",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Danish Pastry, Fruit Filled",
+    "serving": "1 pastry",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Granola Bars Low Fat",
+    "serving": "1 oz uncoated",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Kashi Go Lean Bar",
+    "serving": "1 bar",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Carnation Instant Breakfast",
+    "serving": "1 packet",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Granola Bars- Hard & Plain",
+    "serving": "1 bar",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Oatmeal Cereal",
+    "serving": "1 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Breakfast Items",
+    "name": "Pancake Syrup",
+    "serving": "3/4 tbs",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Kellogg's",
+    "name": "All-Bran Original",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 26
+  },
+  {
+    "group": "Kellogg's",
+    "name": "All-Bran Buds",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 20
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Complete Wheat Bran",
+    "serving": "3/4 cup",
+    "category": "Very High",
+    "mg": 34
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Cracklin' Oat Bran",
+    "serving": "3/4 cup",
+    "category": "Very High",
+    "mg": 15
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Frosted Mini-Wheats",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 28
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Just Right Fruit & Nut",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Low Fat Granola with Raisins",
+    "serving": "2/3 cup",
+    "category": "Very High",
+    "mg": 16
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Kashi Go Lean",
+    "serving": "3/4 cup",
+    "category": "Very High",
+    "mg": 14
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Mueslix Apple & Almond Crunch",
+    "serving": "2/3 cup",
+    "category": "Very High",
+    "mg": 20
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Mueslix",
+    "serving": "2/3 cup",
+    "category": "Very High",
+    "mg": 17
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Puffed Kashi",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Raisin Bran",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 46
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Raisin Bran Crunch",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 27
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Raisin Squares Mini-Wheats",
+    "serving": "3/4 cup",
+    "category": "Very High",
+    "mg": 41
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Smart Start",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 15
+  },
+  {
+    "group": "Kellogg's",
+    "name": "All-Bran with Extra Fiber",
+    "serving": "1/2 cup",
+    "category": "High",
+    "mg": 11
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Cocoa Krispies",
+    "serving": "3/4 cup",
+    "category": "High",
+    "mg": 11
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Kashi Good Friends",
+    "serving": "3/4 cup",
+    "category": "High",
+    "mg": 10
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Complete Oat Bran Flakes",
+    "serving": "3/4 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Kashi Heart to Heart",
+    "serving": "3/4 cup",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Healthy Choice Multi-Grain Flakes",
+    "serving": "3/4 cup",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Froot Loops",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Honey Crunch Corn Flakes",
+    "serving": "3/4 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Rice Krispies",
+    "serving": "1 1/4 cup",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Special K",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Special K Red Berries",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Smacks",
+    "serving": "3/4 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Corn Flakes",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Corn Pops",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Crispix",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Frosted Flakes",
+    "serving": "3/4 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Kellogg's",
+    "name": "Product",
+    "serving": "19 1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Post Cereals",
+    "serving": "100% Bran 1/3 cup",
+    "category": "Very High",
+    "mg": 25
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Post Cereals",
+    "serving": "40% Bran 3/4 cup",
+    "category": "Very High",
+    "mg": 36
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Banana Nut Crunch",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 25
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Cranberry Almond Crunch (Morning Traditions)",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 35
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Fruit & Fiber Dates, Raisins & Walnuts",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 41
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Great Grains Raisin, Dates & Pecans",
+    "serving": "2/3 cup",
+    "category": "Very High",
+    "mg": 17
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Great Grains Crunch Pecan",
+    "serving": "2/3 cup",
+    "category": "Very High",
+    "mg": 18
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Grape Nuts",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 14
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Original Shredded Wheat & Bran",
+    "serving": "1 1/4 cup",
+    "category": "Very High",
+    "mg": 53
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Blueberry Morning",
+    "serving": "1/2 cup",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Grape Nuts Flakes",
+    "serving": "3/4 cup",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Fruity Pebbles",
+    "serving": "3/4 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Honey Bunches of Oats with Almonds",
+    "serving": "3/4 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Honey Bunches of Oats Honey Roasted",
+    "serving": "3/4 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Honeycomb",
+    "serving": "1 1/3 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "Post Cereals",
+    "name": "Wafflecrisp",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 1
+  },
+  {
+    "group": "General Mills",
+    "name": "Basic",
+    "serving": "4 1 cup",
+    "category": "Very High",
+    "mg": 17
+  },
+  {
+    "group": "General Mills",
+    "name": "Fiber One",
+    "serving": "1/2 cup",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "General Mills",
+    "name": "Honey Nut Clusters",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 23
+  },
+  {
+    "group": "General Mills",
+    "name": "Multi-Bran Chex",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 36
+  },
+  {
+    "group": "General Mills",
+    "name": "Nature Valley Cinnamon & Raisins Granola",
+    "serving": "3/4 cup",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "General Mills",
+    "name": "Oatmeal Crisp with Almonds",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 24
+  },
+  {
+    "group": "General Mills",
+    "name": "Oatmeal Raisin Crisp",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "General Mills",
+    "name": "Raisin Nut Bran",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 24
+  },
+  {
+    "group": "General Mills",
+    "name": "Total Raisin Bran",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 31
+  },
+  {
+    "group": "General Mills",
+    "name": "Harmony",
+    "serving": "1 1/4 cup",
+    "category": "High",
+    "mg": 11
+  },
+  {
+    "group": "General Mills",
+    "name": "Wheaties Raisin Bran",
+    "serving": "1 cup",
+    "category": "High",
+    "mg": 11
+  },
+  {
+    "group": "General Mills",
+    "name": "Apple Cinnamon Cheerios",
+    "serving": "3/4 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "General Mills",
+    "name": "Berry Burst Cheerios",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "General Mills",
+    "name": "Cheerios",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "General Mills",
+    "name": "Cinnamon Toast Crunch",
+    "serving": "3/4 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "General Mills",
+    "name": "Corn Chex",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "General Mills",
+    "name": "Count Chocula",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "General Mills",
+    "name": "Frosted Cheerios",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 6
+  },
+  {
+    "group": "General Mills",
+    "name": "Honey Nut Cheerios",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "General Mills",
+    "name": "Golden Grahams",
+    "serving": "3/4 cup",
+    "category": "Moderate",
+    "mg": 9
+  },
+  {
+    "group": "General Mills",
+    "name": "Lucky Charms",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "General Mills",
+    "name": "Reese's Puffs",
+    "serving": "3/4 cup",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "General Mills",
+    "name": "Team Cheerios",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 6
+  },
+  {
+    "group": "General Mills",
+    "name": "Total Corn Flakes",
+    "serving": "1 1/3 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "General Mills",
+    "name": "Wheat Chex",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "General Mills",
+    "name": "Wheaties",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "General Mills",
+    "name": "Whole Grain Total",
+    "serving": "3/4 cup",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "General Mills",
+    "name": "Cocoa Puffs",
+    "serving": "1 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "General Mills",
+    "name": "Kix",
+    "serving": "1 1/3 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "General Mills",
+    "name": "Rice Chex",
+    "serving": "1 1/4 cup",
+    "category": "Low",
+    "mg": 4
+  },
+  {
+    "group": "General Mills",
+    "name": "Trix",
+    "serving": "1 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Quaker",
+    "name": "Low Fat",
+    "serving": "100% Natural Granola with Raisins 3/4 cup",
+    "category": "Very High",
+    "mg": 15
+  },
+  {
+    "group": "Quaker",
+    "name": "Quaker",
+    "serving": "100% Natural Granola Oats & Honey 1/2 cup",
+    "category": "Very High",
+    "mg": 13
+  },
+  {
+    "group": "Quaker",
+    "name": "Oat Bran",
+    "serving": "1 1/4 cup",
+    "category": "High",
+    "mg": 10
+  },
+  {
+    "group": "Quaker",
+    "name": "Honey Nut Oats",
+    "serving": "1 oz",
+    "category": "Moderate",
+    "mg": 7
+  },
+  {
+    "group": "Quaker",
+    "name": "Oatmeal Squares",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Quaker",
+    "name": "Puffed Wheat",
+    "serving": "1 1/4 cup",
+    "category": "Moderate",
+    "mg": 9
+  },
+  {
+    "group": "Quaker",
+    "name": "Toasted Oatmeal",
+    "serving": "1 oz",
+    "category": "Moderate",
+    "mg": 6
+  },
+  {
+    "group": "Quaker",
+    "name": "Puffed Rice",
+    "serving": "1 cup",
+    "category": "Very Low",
+    "mg": 2
+  },
+  {
+    "group": "Quaker",
+    "name": "Quaker Oat Cinnamon Life",
+    "serving": "3/4 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Quaker",
+    "name": "Oat Life",
+    "serving": "3/4 cup",
+    "category": "Low",
+    "mg": 3
+  },
+  {
+    "group": "Quaker",
+    "name": "Cap'n Crunch",
+    "serving": "3/4 cup",
+    "category": "Little or None",
+    "mg": 0
+  },
+  {
+    "group": "Other Cereal Brands",
+    "name": "Bran Flakes with Raisins, Single Brand",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 57
+  },
+  {
+    "group": "Other Cereal Brands",
+    "name": "Nabisco Shredded Wheat",
+    "serving": "2 biscuits",
+    "category": "Very High",
+    "mg": 42
+  },
+  {
+    "group": "Other Cereal Brands",
+    "name": "Nabisco Honey Nut Shredded Wheat Bite Size",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 47
+  },
+  {
+    "group": "Other Cereal Brands",
+    "name": "Spoonsize Shredded Wheat",
+    "serving": "1 cup",
+    "category": "Very High",
+    "mg": 45
+  },
+  {
+    "group": "Other Cereal Brands",
+    "name": "Uncle Sam",
+    "serving": "1 cup",
+    "category": "High",
+    "mg": 11
+  },
+  {
+    "group": "Other Cereal Brands",
+    "name": "Just Right with Crunchy Nuggets",
+    "serving": "1 cup",
+    "category": "Moderate",
+    "mg": 5
+  },
+  {
+    "group": "Other Cereal Brands",
+    "name": "Wheetabix Whole Wheat",
+    "serving": "2 biscuits",
+    "category": "Moderate",
+    "mg": 8
+  },
+  {
+    "group": "Other Cereal Brands",
+    "name": "Healthy Valley Oat Bran Flakes",
+    "serving": "1 cup",
+    "category": "Little or None",
+    "mg": 0
+  }
+]

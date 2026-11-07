@@ -33,6 +33,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link href="/oxalate" className="underline decoration-paper/40 underline-offset-4">
+                Oxalate numbers
+              </Link>
+            </li>
+            <li>
               <Link href="/habits" className="underline decoration-paper/40 underline-offset-4">
                 Daily habits
               </Link>

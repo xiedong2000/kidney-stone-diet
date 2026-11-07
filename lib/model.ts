@@ -62,6 +62,9 @@ export type Food = {
   originalName?: string;
   image?: string;
   avoidReason?: string;
+  oxalateMg?: number;
+  oxalateServing?: string;
+  oxalateSheet?: string;
 };
 
 export const stoneFocuses = [

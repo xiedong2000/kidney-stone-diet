@@ -64,8 +64,9 @@ export default function AboutPage() {
               <a
                 href={source.href}
                 className="font-semibold text-pine underline decoration-pine/30 underline-offset-4"
-                target="_blank"
-                rel="noopener noreferrer"
+                {...(source.href.startsWith("http")
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
               >
                 {source.title}
               </a>

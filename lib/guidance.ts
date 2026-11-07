@@ -1,4 +1,5 @@
 import type { Food, Guidance, StoneFocusId, Verdict } from "@/lib/model";
+import { oxalateSentence } from "@/lib/oxalate";
 
 const severity: Record<Verdict, number> = {
   fits: 0,
@@ -389,6 +390,12 @@ function extraNote(food: Food): Guidance | null {
   return null;
 }
 
+function withOxalateAmount(food: Food, guidance: Guidance): Guidance {
+  const sentence = oxalateSentence(food);
+  if (!sentence || guidance.reason.includes("mg per")) return guidance;
+  return { ...guidance, reason: `${guidance.reason}${sentence}` };
+}
+
 export function guidanceFor(food: Food, focus: StoneFocusId): Guidance {
   if (food.avoidReason) {
     return { verdict: "limit", reason: food.avoidReason };
@@ -411,7 +418,7 @@ export function guidanceFor(food: Food, focus: StoneFocusId): Guidance {
     }
     add(extraNote(food));
     add({ verdict: "fits", reason: fallback(focus) });
-    return strongest(notes);
+    return withOxalateAmount(food, strongest(notes));
   }
 
   if (food.tags.includes("organ")) {
@@ -431,5 +438,5 @@ export function guidanceFor(food: Food, focus: StoneFocusId): Guidance {
   add(supportiveNote(food, focus));
   add({ verdict: "fits", reason: fallback(focus) });
 
-  return strongest(notes);
+  return withOxalateAmount(food, strongest(notes));
 }

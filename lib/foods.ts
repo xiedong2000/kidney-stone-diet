@@ -1,5 +1,6 @@
 import type { Food, FoodTag, Level } from "@/lib/model";
 import { dishes } from "@/lib/dishes";
+import { applyOxalate } from "@/lib/oxalate";
 
 type FoodInput = {
   id: string;
@@ -123,7 +124,7 @@ const ingredients: Food[] = [
     oxalate: "high",
     tags: ["fluid"],
     aliases: ["powdered iced tea"],
-    tip: "Instant tea is a concentrated oxalate source. Brewed tea in a normal cup is the better choice.",
+    tip: "This handout lists sweetened instant iced tea at 0 mg per cup, and brewed tea at 14 mg per cup. Other stone lists treat powdered tea as high. If your urine oxalate is high, count the brewed cup and do not assume every powdered tea is zero.",
   }),
   food({
     id: "milk",
@@ -317,7 +318,7 @@ const ingredients: Food[] = [
     tags: ["plant"],
     aliases: ["baby spinach", "spinach salad", "cooked spinach"],
     image: "/foods/spinach.jpg",
-    tip: "Boiling and discarding the water lowers oxalate, and it is still a high-oxalate food. If you eat it, use a small amount and have milk, yogurt, or cheese at that meal.",
+    tip: "Cooked spinach is 755 mg per half cup on the handout, and raw spinach is 656 mg per cup. Boiling and discarding the water lowers oxalate. If you eat it, use a small amount and have milk, yogurt, or cheese at that meal.",
   }),
   food({
     id: "kale",
@@ -431,7 +432,7 @@ const ingredients: Food[] = [
     oxalate: "moderate",
     tags: ["plant"],
     aliases: ["tomato", "tomato sauce", "marinara"],
-    tip: "A tomato or a modest sauce is fine. A very large daily amount of concentrated sauce is the portion to notice, and jarred sauce is often salty.",
+    tip: "One medium tomato is 7 mg on the handout. Tomato sauce is 17 mg per half cup, and it is often salty from the jar.",
   }),
   food({
     id: "white-potato",
@@ -440,7 +441,7 @@ const ingredients: Food[] = [
     oxalate: "moderate",
     tags: ["plant"],
     aliases: ["potato", "baked potato", "mashed potato"],
-    tip: "A medium potato can fit. The usual problem is the salt, butter-sauce, or frying, not the potato itself. Chips are a different food.",
+    tip: "A medium baked potato with the skin is 97 mg. Mashed potatoes are 29 mg per cup. Fries are about 51 mg per half cup. Salt and frying are separate problems.",
   }),
   food({
     id: "sweet-potato",
@@ -504,7 +505,7 @@ const ingredients: Food[] = [
     group: "grains",
     oxalate: "moderate",
     aliases: ["oats", "porridge"],
-    tip: "Cook it with milk. You get a calcium food in the same bowl, which is the useful way to eat a moderate-oxalate grain.",
+    tip: "Plain oatmeal cereal is listed at 0 mg per cup. Cook it with milk. Granola with nuts, and bran cereals, are the higher-oxalate breakfasts.",
   }),
   food({
     id: "wheat-bran",
@@ -512,7 +513,7 @@ const ingredients: Food[] = [
     group: "grains",
     oxalate: "high",
     aliases: ["bran flakes", "bran", "wheat bran"],
-    tip: "Bran is concentrated oxalate. Oatmeal or another cereal is the easier breakfast.",
+    tip: "Shredded wheat with bran is 53 mg per serving here. All-Bran original is 26 mg per half cup. Rice bran is 281 mg per cup. Read the box, because these are not the same food.",
   }),
   food({
     id: "corn-tortilla",
@@ -844,9 +845,77 @@ const ingredients: Food[] = [
     aliases: ["fast food", "takeaway", "restaurant"],
     tip: "One meal can hold a full day's sodium before you notice. Keep these occasional, drink water with them, and let home cooking carry the week.",
   }),
+  food({
+    id: "okra",
+    name: "Okra",
+    group: "vegetables",
+    tags: ["plant"],
+    aliases: ["okra"],
+    tip: "A half cup is 57 mg, in the same high range as beets. It is not a low-oxalate green.",
+  }),
+  food({
+    id: "navy-beans",
+    name: "Navy beans",
+    group: "protein",
+    purine: "moderate",
+    tags: ["plant"],
+    aliases: ["navy bean", "white beans"],
+    tip: "A half cup is 76 mg. Red kidney beans on the same handout are 15 mg per half cup, and refried beans are 16 mg. The type of bean changes the number.",
+  }),
+  food({
+    id: "kiwi",
+    name: "Kiwi",
+    group: "fruit",
+    aliases: ["kiwifruit", "kiwi fruit"],
+    tip: "One kiwi is 16 mg. That is more than a bowl of strawberries (2 mg per half cup) and far less than a spinach serving.",
+  }),
+  food({
+    id: "dates",
+    name: "Dates",
+    group: "fruit",
+    aliases: ["date", "medjool"],
+    tip: "One date is 24 mg. Five dried figs are also 24 mg. A single piece is a different portion from a handful.",
+  }),
+  food({
+    id: "olives",
+    name: "Olives",
+    group: "vegetables",
+    sodium: "moderate",
+    aliases: ["olive"],
+    tip: "About 10 olives are 18 mg, and they are salty. A few on a plate are not a spinach problem.",
+  }),
+  food({
+    id: "bamboo-shoots",
+    name: "Bamboo shoots",
+    group: "vegetables",
+    tags: ["plant"],
+    aliases: ["bamboo", "冬笋", "竹笋"],
+    tip: "One cup is 35 mg. In a stir-fry, the soy sauce may matter as much as the shoots.",
+  }),
+  food({
+    id: "cocoa-powder",
+    name: "Cocoa powder",
+    group: "sweets",
+    aliases: ["cocoa", "unsweetened cocoa"],
+    tip: "Four teaspoons are 67 mg. A square of chocolate is a smaller dose than a mug made with several spoons of cocoa.",
+  }),
+  food({
+    id: "hot-chocolate",
+    name: "Hot chocolate, homemade",
+    group: "drinks",
+    aliases: ["hot cocoa", "cocoa drink"],
+    tip: "One homemade cup is 65 mg, before counting the sugar. This is not the same as coffee, which is about 1 mg per cup.",
+  }),
+  food({
+    id: "carrot-juice",
+    name: "Carrot juice",
+    group: "drinks",
+    aliases: ["carrot juice"],
+    tip: "One cup is 27 mg. A raw carrot is about 10 mg. Juice concentrates the vegetable.",
+  }),
 ];
 
-export const foods: Food[] = [...ingredients, ...dishes];
+export const foods: Food[] = [...ingredients, ...dishes].map(applyOxalate);
 
 export const featuredFoodIds = [
   "spinach",

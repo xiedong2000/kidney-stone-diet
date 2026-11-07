@@ -47,8 +47,14 @@ export default function HomePage() {
           <p className="mt-5 max-w-2xl text-lg leading-8 text-ink/80">
             StoneWise explains the diet patterns clinicians use for kidney
             stones: enough fluid, less salt, calcium from food, and a short
-            list of foods that matter for your stone type. It is a starting
-            point to take to a clinician or a kidney dietitian.
+            list of foods that matter for your stone type. Oxalate amounts come
+            from a{" "}
+            <Link href="/oxalate" className="font-semibold text-pine underline decoration-pine/30 underline-offset-4">
+              2020 serving list
+            </Link>
+            , in milligrams, so spinach and an orange are not treated as the
+            same kind of “high.” It is a starting point to take to a clinician
+            or a kidney dietitian.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link

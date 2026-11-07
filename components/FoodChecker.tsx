@@ -202,6 +202,12 @@ export function FoodChecker() {
                   Oxalate {item.oxalate} · Sodium {item.sodium} · Purine {item.purine}
                   {item.addedSugar !== "low" ? ` · Added sugar ${item.addedSugar}` : ""}
                 </p>
+                {item.oxalateMg != null && item.oxalateServing ? (
+                  <p className="mt-1 text-sm text-pine">
+                    {item.oxalateMg} mg per {item.oxalateServing}
+                    {item.oxalateSheet ? ` · handout label: ${item.oxalateSheet}` : ""}
+                  </p>
+                ) : null}
                 <p className="mt-3 leading-7 text-ink/85">{guidance.reason}</p>
                 <p className="mt-2 text-sm leading-6 text-ink/70">{item.tip}</p>
                 </div>

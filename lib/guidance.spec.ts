@@ -11,7 +11,7 @@ function verdict(id: string, focus: StoneFocusId): Verdict {
 }
 
 test("calcium oxalate limits the very high-oxalate foods", () => {
-  for (const id of ["spinach", "rhubarb", "swiss-chard", "almonds", "wheat-bran", "instant-tea"]) {
+  for (const id of ["spinach", "rhubarb", "swiss-chard", "almonds", "wheat-bran", "white-potato", "okra", "navy-beans"]) {
     assert.equal(verdict(id, "calcium-oxalate"), "limit", id);
   }
   assert.equal(verdict("kale", "calcium-oxalate"), "fits");
@@ -83,6 +83,17 @@ test("cuisine dishes follow salt, oxalate, and purine", () => {
   assert.equal(verdict("steamed-fish", "calcium-oxalate"), "careful");
   assert.equal(verdict("menudo", "uric-acid"), "limit");
   assert.equal(verdict("fajitas", "calcium-oxalate"), "careful");
+  assert.equal(verdict("orange", "calcium-oxalate"), "careful");
+  assert.equal(verdict("strawberries", "calcium-oxalate"), "fits");
+  assert.equal(verdict("oatmeal", "calcium-oxalate"), "fits");
+  assert.equal(verdict("instant-tea", "calcium-oxalate"), "fits");
+  assert.equal(verdict("miso-soup", "calcium-oxalate"), "limit");
+  const spinach = foods.find((item) => item.id === "spinach");
+  assert.equal(spinach?.oxalateMg, 755);
+  assert.match(guidanceFor(spinach!, "calcium-oxalate").reason, /755 mg/);
+  const orange = foods.find((item) => item.id === "orange");
+  assert.match(guidanceFor(orange!, "calcium-oxalate").reason, /29 mg/);
+  assert.notEqual(verdict("cashews", "calcium-oxalate"), "limit");
 });
 
 test("shared safety calls", () => {

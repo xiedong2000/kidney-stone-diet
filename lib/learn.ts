@@ -51,6 +51,7 @@ export const habits = [
     lede: "Oxalate is a natural part of many plants. It joins calcium in the urine. It is not a reason to stop eating vegetables.",
     points: [
       "The AUA suggests limiting oxalate-rich foods when urine oxalate is high, while keeping normal calcium intake. If urine oxalate is normal, a strict ban is usually the wrong project.",
+      "A 2020 handout by Pam Hilton lists milligrams per serving. Its Very High label starts near 12 mg, while cooked spinach is 755 mg per half cup. Read the number, not only the label.",
       "The foods that actually move the number are the very high ones: spinach, rhubarb, Swiss chard, beet greens, beets, almonds, cashews, wheat bran, and instant tea.",
       "Kale, broccoli, cabbage, lettuce, cucumber, melon, apples, and bananas are low-oxalate foods. They are not spinach.",
       "Boiling a high-oxalate vegetable and discarding the water lowers oxalate. It does not turn spinach into a low-oxalate food.",
@@ -290,6 +291,12 @@ export const visitQuestions = [
 ] as const;
 
 export const sources = [
+  {
+    name: "Pam Hilton",
+    title: "Oxalate Content of Foods (2020)",
+    href: "/oxalate",
+    note: "Serving-by-serving oxalate values used on this site, from the spreadsheet exported on June 16, 2020. The sheet's own Very High label starts near 12 mg per serving. The checker treats 50 mg or more as high.",
+  },
   {
     name: "National Institute of Diabetes and Digestive and Kidney Diseases",
     title: "Eating, Diet, & Nutrition for Kidney Stones",
