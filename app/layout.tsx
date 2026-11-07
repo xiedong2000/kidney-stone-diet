@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Figtree, Newsreader } from "next/font/google";
 import { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/next";
+import { EducationNotice } from "@/components/EducationNotice";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { EducationNotice } from "@/components/EducationNotice";
 import "./globals.css";
 
 const sans = Figtree({
@@ -34,24 +35,25 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${sans.variable} ${serif.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-       <LanguageProvider>
-        <a
-          href="#content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-card focus:px-4 focus:py-2"
-        >
-          Skip to content
-        </a>
-        <Suspense
-          fallback={<div className="h-16 border-b border-line bg-paper" />}
-        >
-          <SiteHeader />
-        </Suspense>
-        <EducationNotice />
-        <main id="content" className="flex-1">
-          {children}
-        </main>
-        <SiteFooter />
-       </LanguageProvider>
+        <LanguageProvider>
+          <a
+            href="#content"
+            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-card focus:px-4 focus:py-2"
+          >
+            Skip to content
+          </a>
+          <Suspense
+            fallback={<div className="h-16 border-b border-line bg-paper" />}
+          >
+            <SiteHeader />
+          </Suspense>
+          <EducationNotice />
+          <main id="content" className="flex-1">
+            {children}
+          </main>
+          <SiteFooter />
+          <Analytics />
+        </LanguageProvider>
       </body>
     </html>
   );
